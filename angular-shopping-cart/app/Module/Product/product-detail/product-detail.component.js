@@ -4,7 +4,7 @@
 angular
     .module('productDetail')
     .component('productDetail', {
-        templateUrl: 'product-detail/product-detail.template.html',
+        templateUrl: 'Module/Product/product-detail/product-detail.template.html',
         controller: ['$routeParams', 'Product',
             function ProductDetailController($routeParams, Product) {
                 var self = this;

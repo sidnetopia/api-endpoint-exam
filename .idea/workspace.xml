@@ -2,251 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38c69a41-6133-4d01-9a6c-cf1755f645ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/angular-shopping-cart/app/product-detail/product-detail.component.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-shopping-cart/app/product-list/product-list.component.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-shopping-cart/app/product-list/product-list.template.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-shopping-cart/e2e-tests/scenarios.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/view/template/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-shopping-cart/app/Module/Product/product-detail/product-detail.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-shopping-cart/app/Module/Product/product-list/product-list.component.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-shopping-cart/app/Module/Product/product-list/product-list.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/.jshintrc" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/.jshintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/app/core/core.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/core/core.module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/app/core/product/product.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/core/product/product.module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/app/core/product/product.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/core/product/product.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/app/core/product/product.service.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/core/product/product.service.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/app/images/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/app/images/paper.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/images/paper.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/app/images/paper_thumb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/images/paper_thumb.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/app/images/rock.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/images/rock.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/app/images/rock_thumb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/images/rock_thumb.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/app/images/scissor.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/images/scissor.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/app/images/scissor_thumb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/images/scissor_thumb.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/app/product-detail/product-detail.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/product-detail/product-detail.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/app/product-detail/product-detail.component.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/app/product-detail/product-detail.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/product-detail/product-detail.module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/app/product-detail/product-detail.template.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/product-detail/product-detail.template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/app/product-list/product-list.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/product-list/product-list.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/app/product-list/product-list.component.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/app/product-list/product-list.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/product-list/product-list.module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/app/product-list/product-list.template.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/app/public/css/app.animations.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/app/public/css/app.animations.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/app/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/app/public/css/image.css" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/public/css/image.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/app/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/app/public/js/app.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/public/js/app.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/app/public/js/app.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/public/js/app.module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/app/public/js/html5shiv.js" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/public/js/html5shiv.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/app/public/js/html5shiv.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/public/js/html5shiv.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/app/public/js/respond.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/public/js/respond.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/e2e-tests/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/e2e-tests/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/e2e-tests/protractor.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/e2e-tests/protractor.conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/e2e-tests/scenarios.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/karma.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/karma.conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/scripts/private/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/scripts/private/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/scripts/private/jenkins.sh" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/scripts/private/jenkins.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/scripts/private/old/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/scripts/private/old/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/scripts/private/old/ScrapeData.js" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/scripts/private/old/ScrapeData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/scripts/private/old/format-json.sh" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/scripts/private/old/format-json.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/scripts/private/old/goto_step.bat" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/scripts/private/old/goto_step.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/scripts/private/old/goto_step.sh" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/scripts/private/old/goto_step.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/scripts/private/old/snapshot.sh" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/scripts/private/old/snapshot.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/scripts/private/push-to-github.sh" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/scripts/private/push-to-github.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/scripts/private/retag.sh" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/scripts/private/retag.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/scripts/private/test-all.sh" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/scripts/private/test-all.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/scripts/private/update-gh-pages.sh" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/scripts/private/update-gh-pages.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping_cart/scripts/update-repo.sh" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/scripts/update-repo.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/LICENSE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/Vagrantfile" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/Vagrantfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/config/application.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/config/application.config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/config/autoload/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/config/autoload/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/config/autoload/global.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/config/autoload/global.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/config/autoload/local.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/config/autoload/local.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/data/cache/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/data/cache/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/init_autoloader.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/init_autoloader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/config/module.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/config/module.config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/ar_JO.mo" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/ar_JO.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/ar_JO.po" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/ar_JO.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/ar_SY.mo" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/ar_SY.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/ar_SY.po" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/ar_SY.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/cs_CZ.mo" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/cs_CZ.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/cs_CZ.po" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/cs_CZ.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/de_DE.mo" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/de_DE.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/de_DE.po" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/de_DE.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/en_US.mo" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/en_US.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/en_US.po" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/en_US.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/es_ES.mo" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/es_ES.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/es_ES.po" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/es_ES.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/fr_CA.mo" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/fr_CA.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/fr_CA.po" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/fr_CA.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/fr_FR.mo" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/fr_FR.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/fr_FR.po" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/fr_FR.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/it_IT.mo" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/it_IT.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/it_IT.po" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/it_IT.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/ja_JP.mo" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/ja_JP.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/ja_JP.po" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/ja_JP.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/nb_NO.mo" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/nb_NO.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/nb_NO.po" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/nb_NO.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/nl_NL.mo" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/nl_NL.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/nl_NL.po" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/nl_NL.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/pl_PL.mo" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/pl_PL.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/pl_PL.po" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/pl_PL.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/pt_BR.mo" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/pt_BR.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/pt_BR.po" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/pt_BR.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/ru_RU.mo" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/ru_RU.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/ru_RU.po" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/ru_RU.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/sk_SK.mo" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/sk_SK.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/sk_SK.po" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/sk_SK.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/sl_SI.mo" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/sl_SI.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/sl_SI.po" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/sl_SI.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/tr_TR.mo" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/tr_TR.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/tr_TR.po" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/tr_TR.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/uk_UA.mo" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/uk_UA.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/uk_UA.po" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/uk_UA.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/vi_VN.mo" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/vi_VN.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/vi_VN.po" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/vi_VN.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/zh_CN.mo" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/zh_CN.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/zh_CN.po" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/zh_CN.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/zh_TW.mo" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/zh_TW.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/language/zh_TW.po" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/language/zh_TW.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/src/Controller/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/src/Module.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/src/Module.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/src/ServiceFactory/Controller/IndexControllerFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/src/ServiceFactory/Controller/IndexControllerFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/src/ServiceFactory/Controller/Rest/PhoneControllerFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/src/ServiceFactory/Controller/Rest/PhoneControllerFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/view/error/404.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/view/error/404.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/view/error/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/view/error/index.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/view/layout/layout.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/view/layout/layout.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Application/view/template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/images/.gitkeep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Product/config/module.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Product/config/module.config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Product/src/Controller/Rest/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/Controller/Rest/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Product/src/Filter/ProductFilter.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/Filter/ProductFilter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Product/src/Model/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/Model/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Product/src/Model/ProductTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/Model/ProductTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Product/src/Module.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/Module.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Product/src/Service/ProductService.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/Service/ProductService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Product/src/ServiceFactory/Controller/Rest/ProductControllerFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/ServiceFactory/Controller/Rest/ProductControllerFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Product/src/ServiceFactory/Model/ProductTableFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/ServiceFactory/Model/ProductTableFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Product/src/ServiceFactory/Service/ProductServiceFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/ServiceFactory/Service/ProductServiceFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/css/bootstrap-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/css/bootstrap-theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/css/bootstrap-theme.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/css/bootstrap-theme.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/css/image.css" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/css/image.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/fonts/glyphicons-halflings-regular.eot" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/fonts/glyphicons-halflings-regular.svg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/fonts/glyphicons-halflings-regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/paper.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/paper.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/paper_thumb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/paper_thumb.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/dell-streak-7.0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/dell-streak-7.0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/dell-streak-7.1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/dell-streak-7.1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/dell-streak-7.2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/dell-streak-7.2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/dell-streak-7.3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/dell-streak-7.3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/dell-streak-7.4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/dell-streak-7.4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/dell-venue.0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/dell-venue.0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/dell-venue.1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/dell-venue.1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/dell-venue.2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/dell-venue.2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/dell-venue.3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/dell-venue.3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/dell-venue.4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/dell-venue.4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/dell-venue.5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/dell-venue.5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/droid-2-global-by-motorola.0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/droid-2-global-by-motorola.0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/droid-2-global-by-motorola.1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/droid-2-global-by-motorola.1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/droid-2-global-by-motorola.2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/droid-2-global-by-motorola.2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/droid-pro-by-motorola.0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/droid-pro-by-motorola.0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/droid-pro-by-motorola.1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/droid-pro-by-motorola.1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/lg-axis.0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/lg-axis.0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/lg-axis.1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/lg-axis.1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/lg-axis.2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/lg-axis.2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/motorola-atrix-4g.0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/motorola-atrix-4g.0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/motorola-atrix-4g.1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/motorola-atrix-4g.1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/motorola-atrix-4g.2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/motorola-atrix-4g.2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/motorola-atrix-4g.3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/motorola-atrix-4g.3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/motorola-bravo-with-motoblur.0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/motorola-bravo-with-motoblur.0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/motorola-bravo-with-motoblur.1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/motorola-bravo-with-motoblur.1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/motorola-bravo-with-motoblur.2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/motorola-bravo-with-motoblur.2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/motorola-charm-with-motoblur.0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/motorola-charm-with-motoblur.0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/motorola-charm-with-motoblur.1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/motorola-charm-with-motoblur.1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/motorola-charm-with-motoblur.2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/motorola-charm-with-motoblur.2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/motorola-defy-with-motoblur.0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/motorola-defy-with-motoblur.0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/motorola-defy-with-motoblur.1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/motorola-defy-with-motoblur.1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/motorola-defy-with-motoblur.2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/motorola-defy-with-motoblur.2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/motorola-xoom-with-wi-fi.0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/motorola-xoom-with-wi-fi.0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/motorola-xoom-with-wi-fi.1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/motorola-xoom-with-wi-fi.1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/motorola-xoom-with-wi-fi.2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/motorola-xoom-with-wi-fi.2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/motorola-xoom-with-wi-fi.3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/motorola-xoom-with-wi-fi.3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/motorola-xoom-with-wi-fi.4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/motorola-xoom-with-wi-fi.4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/motorola-xoom-with-wi-fi.5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/motorola-xoom-with-wi-fi.5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/motorola-xoom.0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/motorola-xoom.0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/motorola-xoom.1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/motorola-xoom.1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/motorola-xoom.2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/motorola-xoom.2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/nexus-s.0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/nexus-s.0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/nexus-s.1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/nexus-s.1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/nexus-s.2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/nexus-s.2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/nexus-s.3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/nexus-s.3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/samsung-galaxy-tab.0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/samsung-galaxy-tab.0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/samsung-galaxy-tab.1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/samsung-galaxy-tab.1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/samsung-galaxy-tab.2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/samsung-galaxy-tab.2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/samsung-galaxy-tab.3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/samsung-galaxy-tab.3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/samsung-galaxy-tab.4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/samsung-galaxy-tab.4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/samsung-galaxy-tab.5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/samsung-galaxy-tab.5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/samsung-galaxy-tab.6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/samsung-galaxy-tab.6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/samsung-gem.0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/samsung-gem.0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/samsung-gem.1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/samsung-gem.1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/samsung-gem.2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/samsung-gem.2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/samsung-mesmerize-a-galaxy-s-phone.0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/samsung-mesmerize-a-galaxy-s-phone.0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/samsung-mesmerize-a-galaxy-s-phone.1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/samsung-mesmerize-a-galaxy-s-phone.1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/samsung-mesmerize-a-galaxy-s-phone.2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/samsung-mesmerize-a-galaxy-s-phone.2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/samsung-mesmerize-a-galaxy-s-phone.3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/samsung-mesmerize-a-galaxy-s-phone.3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/samsung-showcase-a-galaxy-s-phone.0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/samsung-showcase-a-galaxy-s-phone.0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/samsung-showcase-a-galaxy-s-phone.1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/samsung-showcase-a-galaxy-s-phone.1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/samsung-showcase-a-galaxy-s-phone.2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/samsung-showcase-a-galaxy-s-phone.2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/samsung-transform.0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/samsung-transform.0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/samsung-transform.1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/samsung-transform.1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/samsung-transform.2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/samsung-transform.2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/samsung-transform.3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/samsung-transform.3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/samsung-transform.4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/samsung-transform.4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/sanyo-zio.0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/sanyo-zio.0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/sanyo-zio.1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/sanyo-zio.1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/sanyo-zio.2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/sanyo-zio.2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/t-mobile-g2.0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/t-mobile-g2.0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/t-mobile-g2.1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/t-mobile-g2.1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/t-mobile-g2.2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/t-mobile-g2.2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/t-mobile-mytouch-4g.0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/t-mobile-mytouch-4g.0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/t-mobile-mytouch-4g.1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/t-mobile-mytouch-4g.1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/t-mobile-mytouch-4g.2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/t-mobile-mytouch-4g.2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/t-mobile-mytouch-4g.3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/t-mobile-mytouch-4g.3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/t-mobile-mytouch-4g.4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/t-mobile-mytouch-4g.4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/phones/t-mobile-mytouch-4g.5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/phones/t-mobile-mytouch-4g.5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/rock.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/rock.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/rock_thumb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/rock_thumb.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/scissor.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/scissor.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/scissor_thumb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/scissor_thumb.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/img/zf2-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/img/zf2-logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/js/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/js/html5shiv.js" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/js/html5shiv.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/js/html5shiv.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/js/html5shiv.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/js/jquery-1.11.1.min.map" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/js/jquery-1.11.1.min.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/js/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/public/js/respond.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/public/js/respond.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart-api-endpoint/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-shopping-cart/app/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-shopping-cart/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-shopping-cart/app/product-detail/product-detail.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/Module/Product/product-detail/product-detail.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-shopping-cart/app/product-detail/product-detail.component.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/Module/Product/product-detail/product-detail.component.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-shopping-cart/app/product-detail/product-detail.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/Module/Product/product-detail/product-detail.module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-shopping-cart/app/product-detail/product-detail.template.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/Module/Product/product-detail/product-detail.template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-shopping-cart/app/product-list/product-list.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-shopping-cart/app/product-list/product-list.component.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/Module/Product/product-list/product-list.component.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-shopping-cart/app/product-list/product-list.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/Module/Product/product-list/product-list.module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-shopping-cart/app/product-list/product-list.template.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/Module/Product/product-list/product-list.template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-shopping-cart/app/public/js/app.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/Module/app.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-shopping-cart/app/public/js/app.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/Module/app.module.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -262,61 +33,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/Controller/Rest/ProductController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="824">
-              <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/Model/Product.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="38" lean-forward="true" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/ServiceFactory/Controller/Rest/ProductControllerFactory.php">
+        <entry file="file://$PROJECT_DIR$/angular-shopping-cart/app/Module/app.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+            <state relative-caret-position="102">
+              <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/ServiceFactory/Model/ProductTableFactory.php">
+        <entry file="file://$PROJECT_DIR$/angular-shopping-cart/app/Module/app.module.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+            <state relative-caret-position="136">
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/Module.php">
+        <entry file="file://$PROJECT_DIR$/angular-shopping-cart/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shopping-cart-rest-api/module/Product/config/module.config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="38" />
+            <state relative-caret-position="476">
+              <caret line="28" column="82" lean-forward="true" selection-start-line="28" selection-start-column="82" selection-end-line="28" selection-end-column="82" />
+              <folding>
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#hr#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -330,8 +86,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/angular-shopping_cart/app/core/core.module.js" />
-        <option value="$PROJECT_DIR$/angular-shopping_cart/app/product-list/phone-list.component.js" />
         <option value="$PROJECT_DIR$/angular-shopping_cart/app/product-list/product-list.module.js" />
         <option value="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Product/src/Model/Product.php" />
         <option value="$PROJECT_DIR$/shopping_cart-api-endpoint/module/Product/src/Controller/Rest/ProductController.php" />
@@ -358,7 +112,6 @@
         <option value="$PROJECT_DIR$/angular-shopping-cart/app/core/product/product.service.js" />
         <option value="$PROJECT_DIR$/angular-shopping-cart/app/core/product/product.service.spec.js" />
         <option value="$PROJECT_DIR$/angular-shopping-cart/app/product-detail/product-detail.component.js" />
-        <option value="$PROJECT_DIR$/angular-shopping-cart/app/product-list/product-list.component.js" />
         <option value="$PROJECT_DIR$/angular-shopping-cart/app/product-list/product-list.component.spec.js" />
         <option value="$PROJECT_DIR$/angular-shopping-cart/e2e-tests/scenarios.js" />
         <option value="$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/Filter/ProductFilter.php" />
@@ -366,18 +119,24 @@
         <option value="$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/Service/ProductService.php" />
         <option value="$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/ServiceFactory/Model/ProductTableFactory.php" />
         <option value="$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/ServiceFactory/Service/ProductServiceFactory.php" />
-        <option value="$PROJECT_DIR$/angular-shopping-cart/app/public/js/app.module.js" />
         <option value="$PROJECT_DIR$/angular-shopping-cart/app/product-list/product-list.template.html" />
-        <option value="$PROJECT_DIR$/angular-shopping-cart/.htaccess" />
-        <option value="$PROJECT_DIR$/angular-shopping-cart/app/public/js/app.config.js" />
-        <option value="$PROJECT_DIR$/angular-shopping-cart/app/index.html" />
-        <option value="$PROJECT_DIR$/angular-shopping-cart/app/.htaccess" />
         <option value="$PROJECT_DIR$/shopping-cart-rest-api/config/application.config.php" />
         <option value="$PROJECT_DIR$/shopping-cart-rest-api/module/Product/config/module.config.php" />
         <option value="$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/Module.php" />
         <option value="$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/Model/Product.php" />
         <option value="$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/Controller/Rest/ProductController.php" />
         <option value="$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/ServiceFactory/Controller/Rest/ProductControllerFactory.php" />
+        <option value="$PROJECT_DIR$/angular-shopping-cart/app/product-list/product-list.component.js" />
+        <option value="$PROJECT_DIR$/angular-shopping-cart/app/.htaccess" />
+        <option value="$PROJECT_DIR$/angular-shopping-cart/.htaccess" />
+        <option value="$PROJECT_DIR$/angular-shopping-cart/app/public/js/app.config.js" />
+        <option value="$PROJECT_DIR$/angular-shopping-cart/app/public/js/app.module.js" />
+        <option value="$PROJECT_DIR$/angular-shopping-cart/app/Module/Product/product-list/product-list.component.js" />
+        <option value="$PROJECT_DIR$/angular-shopping-cart/app/Module/Product/product-detail/product-detail.component.js" />
+        <option value="$PROJECT_DIR$/angular-shopping-cart/app/Module/Product/product-detail/product-detail.config.js" />
+        <option value="$PROJECT_DIR$/angular-shopping-cart/app/index.html" />
+        <option value="$PROJECT_DIR$/angular-shopping-cart/app/Module/Product/product-list/product-list.config.js" />
+        <option value="$PROJECT_DIR$/angular-shopping-cart/app/Module/app.config.js" />
       </list>
     </option>
   </component>
@@ -490,75 +249,35 @@
             <path>
               <item name="api-endpoint exam" type="b2602c69:ProjectViewProjectNode" />
               <item name="api-endpoint exam" type="462c0819:PsiDirectoryNode" />
-              <item name="shopping-cart-rest-api" type="462c0819:PsiDirectoryNode" />
+              <item name="angular-shopping-cart" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="api-endpoint exam" type="b2602c69:ProjectViewProjectNode" />
               <item name="api-endpoint exam" type="462c0819:PsiDirectoryNode" />
-              <item name="shopping-cart-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="angular-shopping-cart" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="api-endpoint exam" type="b2602c69:ProjectViewProjectNode" />
               <item name="api-endpoint exam" type="462c0819:PsiDirectoryNode" />
-              <item name="shopping-cart-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="autoload" type="462c0819:PsiDirectoryNode" />
+              <item name="angular-shopping-cart" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Module" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="api-endpoint exam" type="b2602c69:ProjectViewProjectNode" />
               <item name="api-endpoint exam" type="462c0819:PsiDirectoryNode" />
-              <item name="shopping-cart-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-endpoint exam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-endpoint exam" type="462c0819:PsiDirectoryNode" />
-              <item name="shopping-cart-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="Application" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-endpoint exam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-endpoint exam" type="462c0819:PsiDirectoryNode" />
-              <item name="shopping-cart-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
+              <item name="angular-shopping-cart" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Module" type="462c0819:PsiDirectoryNode" />
               <item name="Product" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="api-endpoint exam" type="b2602c69:ProjectViewProjectNode" />
               <item name="api-endpoint exam" type="462c0819:PsiDirectoryNode" />
-              <item name="shopping-cart-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="Product" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-endpoint exam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-endpoint exam" type="462c0819:PsiDirectoryNode" />
-              <item name="shopping-cart-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="Product" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-endpoint exam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-endpoint exam" type="462c0819:PsiDirectoryNode" />
-              <item name="shopping-cart-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="Product" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ServiceFactory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-endpoint exam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-endpoint exam" type="462c0819:PsiDirectoryNode" />
-              <item name="shopping-cart-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="Product" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ServiceFactory" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
+              <item name="angular-shopping-cart" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -569,23 +288,25 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/angular-shopping_cart/app/images/products" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/angular-shopping-cart/app/Module/Product/product-list" />
     <property name="nodejs.protractor.protractor_package" value="$PROJECT_DIR$/angular-shopping_cart/node_modules/protractor" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sidney.g\Documents\api-endpoint exam\angular-shopping-cart\app\Module" />
+      <recent name="C:\Users\sidney.g\Documents\api-endpoint exam\angular-shopping-cart\app\Module\Product" />
+      <recent name="C:\Users\sidney.g\Documents\api-endpoint exam\angular-shopping-cart" />
+      <recent name="R:\bumbleshet\Documents\api-endpoint exam\angular-shopping_cart\app\images" />
+      <recent name="R:\bumbleshet\Documents\api-endpoint exam\angular-shopping_cart\app\public" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sidney.g\Documents\api-endpoint exam\angular-shopping-cart\app\Module\Product\product-list" />
       <recent name="R:\bumbleshet\Documents\api-endpoint exam\angular-shopping_cart\app\images\products" />
       <recent name="R:\bumbleshet\Documents\api-endpoint exam\angular-shopping_cart\app\core\product" />
       <recent name="R:\bumbleshet\Documents\api-endpoint exam\angular-shopping_cart\app" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="R:\bumbleshet\Documents\api-endpoint exam\angular-shopping_cart\app\images" />
-      <recent name="R:\bumbleshet\Documents\api-endpoint exam\angular-shopping_cart\app\public" />
-      <recent name="R:\bumbleshet\Documents\api-endpoint exam\angular-shopping_cart\app\js" />
-      <recent name="R:\bumbleshet\Documents\api-endpoint exam\angular-shopping_cart\app\css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -638,7 +359,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32308000" />
+    <option name="totallyTimeSpent" value="36554000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -669,9 +390,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/shopping_cart/module/Cart/src/Controller/CartController.php" />
-    <entry file="file://$PROJECT_DIR$/shopping_cart/module/Cart/view/cart/cart-page.phtml" />
-    <entry file="file://$PROJECT_DIR$/../angularjs-training/angular-phonecat/app/core/phone/phone.module.js" />
     <entry file="file://$PROJECT_DIR$/../angularjs-training/angular-phonecat/app/phone-list/phone-list.template.html" />
     <entry file="file://$PROJECT_DIR$/shopping_cart/module/Product/view/product/home-page.phtml" />
     <entry file="file://$PROJECT_DIR$/angular-shopping-cart/app/public/css/image.css">
@@ -686,24 +404,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/shopping_cart/composer.json" />
     <entry file="file://$PROJECT_DIR$/shopping_cart/module/Product/view/product/product-page.phtml" />
-    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/karma.conf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular-shopping-cart/scripts/private/update-gh-pages.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="39" column="2" lean-forward="true" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/scripts/private/test-all.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="78" selection-start-line="31" selection-start-column="78" selection-end-line="31" selection-end-column="78" />
         </state>
       </provider>
     </entry>
@@ -722,7 +426,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/app/product-detail/product-detail.component.spec.js">
+    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/app/Module/Product/product-detail/product-detail.component.spec.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="34" selection-start-line="34" selection-end-line="34" />
@@ -754,13 +458,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/e2e-tests/scenarios.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-128">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -806,53 +503,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/app/product-list/product-list.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/.htaccess">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="27" selection-start-line="27" selection-end-line="27" selection-end-column="21" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#hr#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/app/product-list/product-list.component.spec.js">
+    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/.htaccess" />
+    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/app/Module/Product/product-list/product-list.component.spec.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/app/product-list/product-list.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/app/product-detail/product-detail.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/app/product-list/product-list.template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="4" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -867,13 +522,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/angular-shopping-cart/app/public/js/html5shiv.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/app/product-detail/product-detail.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shopping-cart-rest-api/module/Application/view/template/index.html">
       <provider selected="true" editor-type-id="text-editor" />
@@ -891,38 +539,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/app/product-detail/product-detail.template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="59" lean-forward="true" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/app/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/app/public/js/app.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shopping-cart-rest-api/config/application.config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/app/public/js/app.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="53" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -965,6 +585,119 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/app/Module/Product/product-list/product-list.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/app/Module/Product/product-list/product-list.template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="56" lean-forward="true" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/app/Module/Product/product-detail/product-detail.template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="59" lean-forward="true" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/app/Module/Product/product-detail/product-detail.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/app/Module/Product/product-detail/product-detail.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/scripts/update-repo.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/scripts/private/test-all.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="78" selection-start-line="31" selection-start-column="78" selection-end-line="31" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/e2e-tests/scenarios.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-128">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/karma.conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/app/Module/Product/product-list/product-list.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="82" lean-forward="true" selection-start-line="28" selection-start-column="82" selection-end-line="28" selection-end-column="82" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#hr#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/app/Module/Product/product-list/product-list.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/app/Module/Product/product-detail/product-detail.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/app/Module/app.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-shopping-cart/app/Module/app.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
         </state>
       </provider>
     </entry>
