@@ -1,0 +1,65 @@
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.zf-green {
+    color: #68b604;
+}
+
+.container-style{
+    background-color: #e1e6ed;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    padding: 7px;
+}
+
+.btn-success {
+  background-color: #55df53;
+  background-image: -moz-linear-gradient(top, #55df53, #03A74F);
+  background-image: -ms-linear-gradient(top, #55df53, #03A74F);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#55df53), to(#03A74F));
+  background-image: -webkit-linear-gradient(top, #55df53, #03A74F);
+  background-image: -o-linear-gradient(top, #55df53, #03A74F);
+  background-image: linear-gradient(top, #55df53, #03A74F);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#55df53', endColorstr='#03A74F', GradientType=0);
+}
+
+.btn-padding{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.btn-square{
+    border-radius: 0;
+}
+
+.btn-success:hover,
+.btn-success:active,
+.btn-success.active,
+.btn-success.disabled,
+.btn-success[disabled] {
+  background-color: #03A74F;
+}
+
+.btn-success:active, .btn-success.active {
+  background-color: #03A74F;
+}
+
+div.container a.brand {
+    background: url("../img/zf2-logo.png") no-repeat scroll 0 10px transparent;
+    margin-left: 0;
+    padding: 8px 20px 12px 40px;
+}
+
+.row.vdivide [class*='col-']:not(:last-child):after {
+    background: #e0e0e0;
+    width: 1px;
+    content: "";
+    display:block;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+    min-height: 70px;
+}

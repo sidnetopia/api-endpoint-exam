@@ -1,0 +1,31 @@
+
+      <!--Sidebar content-->
+
+
+
+      <div class="container">
+        <p>
+          Search:
+          <input ng-model="$ctrl.query" />
+        </p>
+        <div ng-repeat="product in $ctrl.products  | filter:$ctrl.query">
+          <div class="row">
+            <div class="col-md-4 col-md-offset-2">
+              <div class="image-container">
+                <img ng-src="{{product.product_thumbnail}}" class="image"/>
+                <a ng-href="http://localhost:8000/#!/product/{{product.product_id}}">
+                  <div class="overlay">View Product</div>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <b>Product Name: </b> {{product.product_name}}
+              <br><br>
+              <b>Product Description: </b>{{product.product_desc}}
+              <br><br>
+              <b>Price: </b> ${{product.price}}
+            </div>
+          </div>
+          <hr>
+        </div>
+      </div>
