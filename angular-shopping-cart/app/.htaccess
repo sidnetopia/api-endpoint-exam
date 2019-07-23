@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule ^/?product/([0-9]+)$ #!/product/$1

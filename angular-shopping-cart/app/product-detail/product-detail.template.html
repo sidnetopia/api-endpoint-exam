@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-1">
+            <img ng-src="{{$ctrl.product.product_image}}" class="product_image"/>
+        </div>
+        <div class="col-md-4 col-md-offset-1">
+            <form action="<?= $this->url('cart', ['action' => 'addOrUpdateItemToCart']); ?>" method="POST">
+                <b>Product Name: </b> <span>{{$ctrl.product.product_name}} </span>
+                <br><br>
+                <b>Product Description: </b> <span> {{$ctrl.product.product_desc}}  </span>
+                <br><br>
+                <b>Unit Price: </b> $ <span> {{$ctrl.product.price}} </span>
+                <br><br>
+                <b>Quantity: </b>
+                <input type="number"
+                       class="qtyInput"
+                       ng-model="$ctrl.qtyInput"
+                       ng-change="$ctrl.onQtyInputChange()"
+                       min="1"
+                       min="{{$ctrl.product.stock_qty}}"
+                       step="1"
+                       pattern="\d+"
+                >
+                <br><br>
+                <b>Price: </b>
+                <b>{{$ctrl.price}}</b>
+                <br><br>
+                <button class="btn btn-success btn-padding btn-square" type="submit" id="addToCart">Add to Cart
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
