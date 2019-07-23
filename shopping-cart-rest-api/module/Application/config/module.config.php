@@ -5,6 +5,7 @@ use Zend\Mvc\Router\Http\Literal;
 use Zend\Mvc\Router\Http\Segment;
 
 return array(
+    'hostname' => "http://localhost/",
     'router' => [
         'routes' => [
             'home' => [

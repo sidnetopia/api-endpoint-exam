@@ -2,7 +2,6 @@
 namespace Product;
 
 return array(
-    'hostname' => "http://localhost/",
     'router' => array(
         'routes' => array(
         'recipe' => array(

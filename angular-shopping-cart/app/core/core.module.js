@@ -1,4 +1,7 @@
 'use strict';
 
 // Define the `core` module
-angular.module('core', ['core.product']);
+angular.module('core', [
+    'core.product',
+    'core.cart'
+]);

@@ -1,0 +1,55 @@
+<div class="container">
+    <table class="table">
+        <tr style="background-color: #e1e6ed">
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="/<?= $this->Products[$key]->product_thumbnail ?>" class="image"/>
+                    </div>
+                    <div class="col-md-4">
+                        <b> <?= $this->Products[$key]->product_name ?></b>
+                        <br><br>
+                        <?= $this->Products[$key]->product_desc ?>
+                        <br><br>
+                        <b>$<?= $this->Products[$key]->price ?> each<b>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <input type="number" name="qty" id="qtyInput<?= $CartItem->cart_item_id ?>"
+                       value="<?= $CartItem->qty ?>" required
+                       min="1"
+                       onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57"
+                       max="<?= $this->Products[$key]->stock_qty ?>">
+                <a href="<?= $this->url('cart', ['action' => 'deleteCartItem', 'id' => $CartItem->cart_item_id]); ?>"
+                   class="btn btn-danger btn-square">Delete Item</a>
+                <input type="hidden" name="cartItemId" id="cartItemId<?= $CartItem->cart_item_id ?>"
+                       value="<?= $CartItem->cart_item_id ?>"/>
+                <input type="hidden" name="productId" id="productId<?= $CartItem->cart_item_id ?>"
+                       value="<?= $CartItem->product_id ?>"/>
+            </td>
+            <td>
+                $ <span id="cartPrice<?= $CartItem->cart_item_id ?>"><?= $CartItem->price ?></span>
+            </td>
+        </tr>
+    </table>
+</div>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 col-md-offset-10">
+            Subtotal: $<span id="subTotal"><?= $this->Payments->sub_total ?></span><br><br>
+            Shipping: $<?= $this->Payments->shipping_total ?><br><br>
+            <span style='color: red; font-weight: bold;'>Grand Total:   $
+                               <span id="totalAmount"><?= $this->Payments->total_amount ?></span></span><br><br>
+            <a href="<?= $this->url('shipping', ['action' => 'showShipping']); ?>"
+               class="btn btn-success btn-padding btn-square">Checkout</a>
+        </div>
+
+    </div>
+</div>
