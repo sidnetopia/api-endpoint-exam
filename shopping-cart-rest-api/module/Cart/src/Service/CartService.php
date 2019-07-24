@@ -3,15 +3,30 @@ namespace Cart\Service;
 
 class CartService
 {
-    public function add($existing, $new)
+    public function __construct()
     {
-        $total = $existing + $new;
-        return $total;
+
     }
 
-    public function subtract($existing, $new)
+    /**
+     * Decode jsonData from post and insert phone
+     * by phoneId and jsonData. Return error if failed.
+     *
+     * @param mixed $data
+     * @return ApiProblemResponse
+     */
+    public function create($data)
     {
-        $total = $existing - $new;
-        return $total;
+        $data = $this->PhoneFilter->sanitize($data);
+        $phoneId = $data['phoneId'];
+        $jsonData = json_encode($data['jsonData']);
+
+        try{
+            $this->PhoneTable->insertPhone($phoneId, $jsonData);
+        }catch (\Exception $e){
+            return new ApiProblemResponse(new ApiProblem(500, 'Caught exception: '. $e->getMessage()));
+        }
+
+        return new ApiProblemResponse(new ApiProblem(201, 'Created'));
     }
 }

@@ -1,0 +1,46 @@
+<div class="container">
+    <table class="table">
+        <tr style="background-color: #e1e6ed">
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+            <tr ng-repeat="cartItem in $ctrl.cartItems">
+                <td>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img ng-src="{{cartItem.product_thumbnail}}"  class="image"/>
+                        </div>
+                        <div class="col-md-4">
+                            <b>{{cartItem.product_name}}</b>
+                            <br><br>
+                            {{cartItem.product_desc}}
+                            <br><br>
+                            <b>$ {{cartItem.price}} each</b>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    {{cartItem.qty}}
+                </td>
+                <td>
+                    {{cartItem.cart_item_price}}
+                </td>
+            </tr>
+    </table>
+</div>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 col-md-offset-10">
+            Subtotal:       {{$ctrl.cart.cartDetails.sub_total}}<br><br>
+            Shipping:   {{$ctrl.cart.cartDetails.shipping_total}}<br><br>
+            <span style='color: red; font-weight: bold;'>Grand Total:   {{$ctrl.cart.cartDetails.total_amount}}</span><br><br>
+            <a href="<?=$this->url('shipping', ['action' => 'showShipping']);?>" class="btn btn-success btn-padding btn-square">Checkout</a>
+        </div>
+
+    </div>
+</div>
+
+<?php }?>
+

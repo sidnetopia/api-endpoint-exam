@@ -11,6 +11,7 @@ return array(
     'modules' => array(
         'Application',
         'Product',
+        'Cart',
         'ZF\ApiProblem',
     ),
 

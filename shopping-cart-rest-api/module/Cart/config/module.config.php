@@ -10,10 +10,10 @@ namespace Cart;
 return array(
     'router' => array(
         'routes' => array(
-            'recipe' => array(
+            'cart' => array(
                 'type' => 'Segment',
                 'options' => array(
-                    'route' => '/product[/:id]',
+                    'route' => '/cart[/:id]',
                     'defaults' => array(
                         'controller' => Controller\Rest\CartController::class,
                     ),
@@ -27,26 +27,13 @@ return array(
         ),
     ),
     'service_manager' => array(
-        'factories' => array(
-            CartTable::class      => CartTableFactory::class,
-            CartItemTable::class  => CartItemTableFactory::class,
-            ProductTable::class   => ProductTableFactory::class,
-            CustomerTable::class  => CustomerTableFactory::class,
-            CartService::class    => CartServiceFactory::class,
-            ProductService::class => ProductServiceFactory::class,
-            CartFilter::class     => CartFilterFactory::class,
-            CartItemFilter::class => CartItemFilterFactory::class,
-            ProductFilter::class  => ProductFilterFactory::class,
-            CustomerFilter::class => LoginFilterFactory::class,
-            'Cart\Storage\CartSessionContainer' => CartSessionContainerFactory::class,
+        'invokables' => array(
+            Model\Cart::class => Model\Cart::class,
+            Product\Model\Product::class => Product\Model\Product::class,
         ),
-    ),
-    'view_manager' => array(
-        'template_map' => array(
-            'cart/cart/show-cart'   => __DIR__ . '/../view/cart/cart-page.phtml',
-            'cart/cart/delete-cart-item' => __DIR__ . '/../view/cart/cart-page.phtml',
-            'cart/cart/add-or-update-item-to-cart' => __DIR__ . '/../view/cart/cart-page.phtml',
-            'cart/cart/update-cart-quantity'       => __DIR__ . '/../view/cart/cart-page.phtml',
+        'factories' => array(
+            Model\CartTable::class => ServiceFactory\Model\CartTableFactory::class,
+            Model\CartItemTable::class => ServiceFactory\Model\CartItemTableFactory::class,
         ),
     ),
 );

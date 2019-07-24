@@ -38,12 +38,12 @@ class ProductController extends AbstractRestfulController
     public function getList()
     {
         try {
-            $productList = $this->ProductTable->fetchProductList();
+            $ProductList = $this->ProductTable->fetchProductList();
         } catch (\Exception $e) {
             return new ApiProblemResponse(new ApiProblem(500, 'Caught exception: ' . $e->getMessage()));
         }
 
-        $productListArray = $productList->toArray();
+        $productListArray = $ProductList->toArray();
         foreach ($productListArray as $key => $value) {
             $productListArray[$key]['product_thumbnail'] = $this->Product
                 ->getImagePath($value['product_thumbnail'], $this->hostname);

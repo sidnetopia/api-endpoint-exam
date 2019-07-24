@@ -6,5 +6,6 @@ angular.module('shoppingCartApp', [
   'ngRoute',
   'core',
   'productList',
-  'productDetail'
+  'productDetail',
+  'cart'
 ]);

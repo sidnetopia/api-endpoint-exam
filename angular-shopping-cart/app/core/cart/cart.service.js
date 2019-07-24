@@ -7,7 +7,6 @@ factory('Cart', ['$resource',
         return $resource('http://training.local/cart', {}, {
             query: {
                 method: 'GET',
-                isArray: true
             }
         });
     }

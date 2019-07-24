@@ -4,17 +4,17 @@ namespace Product;
 return array(
     'router' => array(
         'routes' => array(
-        'recipe' => array(
-            'type' => 'Segment',
-            'options' => array(
-                'route' => '/product[/:id]',
-                'defaults' => array(
-                    'controller' => Controller\Rest\ProductController::class,
+            'product' => array(
+                'type' => 'Segment',
+                'options' => array(
+                    'route' => '/product[/:id]',
+                    'defaults' => array(
+                        'controller' => Controller\Rest\ProductController::class,
+                    ),
                 ),
             ),
         ),
     ),
-),
     'controllers' => array(
         'factories' => array(
             Controller\Rest\ProductController::class => ServiceFactory\Controller\Rest\ProductControllerFactory::class
