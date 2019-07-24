@@ -11,6 +11,7 @@ namespace Cart\Controller\Rest;
 use Cart\Model\CartItemTable;
 use Cart\Model\CartTable;
 use Product\Model\Product;
+use Zend\Db\Sql\Expression;
 use Zend\Mvc\Controller\AbstractRestfulController;
 use Zend\View\Model\JsonModel;
 use ZF\ApiProblem\ApiProblem;
@@ -39,8 +40,10 @@ class CartController extends AbstractRestfulController
     public function getList()
     {
         try {
-            $Cart = $this->CartTable->fetchCart()->current();
-            $CartItems = $this->CartItemTable->fetchCartItems($Cart->cart_id);
+            $Cart = $this->CartTable->fetchCart(
+                ['cart_id', 'sub_total', 'shipping_total', 'total_amount'])->current();
+            $CartItems = $this->CartItemTable->fetchCartItems(['qty', 'price'],
+                ['cart_id' => $Cart->cart_id], true);
 
         } catch (\Exception $e) {
             return new ApiProblemResponse(new ApiProblem(500, 'Caught exception: ' . $e->getMessage()));
@@ -57,7 +60,27 @@ class CartController extends AbstractRestfulController
         return new JsonModel(['cartItems' => $cartItemArray, 'cartDetails' => $Cart]);
     }
 
-    public function delete($data)
+    public function create($data)
     {
+        try {
+            $cartItemId = $this->CartItemTable->fetchCartItems(['cart_item_id'], [
+                    'product_id' => $data['product_id'],
+                    'cart_id' => $data['cart_id'],
+                ], false)->current()->cart_item_id;
+            if ($cartItemId) {
+                $cartItemData = array(
+                    'weight' => new Expression("weight + {$data['weight']}"),
+                    'qty' => new Expression("qty + {$data['qty']}"),
+                    'price' => new Expression("price + {$data['price']}"),
+                );
+                $this->CartItemTable->updateCartItem($cartItemData, ['cart_item_id' => $cartItemId]);
+                return new ApiProblemResponse(new ApiProblem(201, 'Created'));
+            } else {
+                $this->CartItemTable->insertCartItem($data);
+                return new ApiProblemResponse(new ApiProblem(202, 'Updated'));
+            }
+        } catch (\Exception $e) {
+            return new ApiProblemResponse(new ApiProblem(500, 'Caught exception: ' . $e->getMessage()));
+        }
     }
 }

@@ -12,19 +12,38 @@ class CartItemTable
         $this->TableGateway = $TableGateway;
     }
 
-    public function fetchCartItems($cart_id)
+    public function fetchCartItems($columns, $where, $joinToProducts = false)
     {
-        $select = $this->TableGateway->getSql()->select()
-            ->columns(['qty', 'price'])
-            ->join(
-            array("p" => "products"),
-            "p.product_id = ci.product_id",
-            array('product_thumbnail', 'product_name', 'product_desc', 'price'),
-            "INNER"
-             )->where(['cart_id' => $cart_id]);
+        $select = $this->TableGateway->getSql()->select();
+        if ($columns) {
+            $select->columns($columns);
+        }
 
+        if ($joinToProducts) {
+            $select->join(
+                array("p" => "products"),
+                "p.product_id = ci.product_id",
+                array('product_thumbnail', 'product_name', 'product_desc', 'price'),
+                "INNER"
+            );
+        }
+
+        if ($where) {
+            $select->where($where);
+        }
         $CartItems = $this->TableGateway->selectWith($select);
 
         return $CartItems;
+    }
+
+    public function insertCartItem($data)
+    {
+        $this->TableGateway->insert($data);
+    }
+
+    public function updateCartItem($data, $where)
+    {
+        $update = $this->TableGateway->getSql()->update()->set($data)->where($where);
+        $this->TableGateway->updateWith($update);
     }
 }

@@ -20,7 +20,6 @@ class CartControllerFactory
         $Container     = $Container->getServiceLocator();
         $CartTable     = $Container->get(CartTable::class);
         $CartItemTable = $Container->get(CartItemTable::class);
-
         $hostname      = $Container->get('Config')['hostname'];
         $Product       = $Container->get(Product::class);
 
