@@ -1,10 +1,10 @@
 <?php
-namespace Cart\ServiceFactory\Storage;
+namespace Job\ServiceFactory\Storage;
 
 use Psr\Container\ContainerInterface;
 use Zend\Session\Container;
 
-class CartSessionContainerFactory
+class JobSessionContainerFactory
 {
     public function __invoke(ContainerInterface $Container)
     {

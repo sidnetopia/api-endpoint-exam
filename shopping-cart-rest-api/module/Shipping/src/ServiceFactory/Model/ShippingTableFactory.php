@@ -1,13 +1,12 @@
 <?php
-namespace Cart\ServiceFactory\Model;
+namespace Shipping\ServiceFactory\Model;
 
-use Cart\Model\CartItem;
-use Cart\Model\CartItemTable;
+use Shipping\Model\ShippingTable;
 use Psr\Container\ContainerInterface;
 use Zend\Db\ResultSet\ResultSet;
 use Zend\Db\TableGateway\TableGateway;
 
-class CartItemTableFactory
+class ShippingTableFactory
 {
     public function __invoke(ContainerInterface $Container)
     {
@@ -17,11 +16,11 @@ class CartItemTableFactory
 
         // create TableGateway instance
         $TableGateway = new TableGateway(
-            'cart_items',
+            'shipping',
             $DbAdapter,
             null,
             $ResultSetPrototype
         );
-        return new CartItemTable($TableGateway);
+        return new ShippingTable($TableGateway);
     }
 }

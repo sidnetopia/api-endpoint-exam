@@ -5,8 +5,8 @@ angular
     .module('productDetail')
     .component('productDetail', {
         templateUrl: 'Module/Product/product-detail/product-detail.template.html',
-        controller: ['$routeParams', 'Product',
-            function ProductDetailController($routeParams, Product) {
+        controller: ['$routeParams', 'Product', 'Cart',
+            function ProductDetailController($routeParams, Product, Cart) {
                 var self = this;
 
                 self.productId = $routeParams.productId;
@@ -18,6 +18,20 @@ angular
                 self.onQtyInputChange = function () {
                     let price = this.qtyInput * self.product.price;
                     self.price = !isNaN(price) ? price : '';
+                };
+                self.addCartItem = function() {
+                    var data = {
+                        qty: self.qtyInput,
+                        product_id: self.productId
+                    };
+                    // console.log(data);
+                    Cart.save();
+                    // response.success(function(data, status, headers, config) {
+                    //     alert(JSON.stringify({data: data}));
+                    // });
+                    // response.error(function(data, status, headers, config) {
+                    //     alert( "failure message: " + JSON.stringify({data: data}));
+                    // });
                 };
             }
         ],

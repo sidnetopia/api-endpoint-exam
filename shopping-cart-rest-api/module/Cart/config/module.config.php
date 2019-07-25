@@ -28,6 +28,7 @@ return array(
     ),
     'service_manager' => array(
         'invokables' => array(
+            Filter\CartItemFilter::class => Filter\CartItemFilter::class,
             Model\Cart::class => Model\Cart::class,
             Product\Model\Product::class => Product\Model\Product::class,
         ),

@@ -17,7 +17,7 @@ class CartTableFactory
 
         // create TableGateway instance
         $TableGateway = new TableGateway(
-            ['c' => 'carts'],
+            'carts',
             $DbAdapter,
             null,
             $ResultSetPrototype

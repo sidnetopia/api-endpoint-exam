@@ -8,6 +8,7 @@ Cart->CartItems->Products->Customers->JobOrder->JobItems->Shipping->Payment
 namespace Cart\ServiceFactory\Controller\Rest;
 
 use Cart\Controller\Rest\CartController;
+use Cart\Filter\CartItemFilter;
 use Cart\Model\CartItemTable;
 use Cart\Model\CartTable;
 use Product\Model\Product;
@@ -17,17 +18,19 @@ class CartControllerFactory
 {
     public function __invoke(ContainerInterface $Container)
     {
-        $Container     = $Container->getServiceLocator();
-        $CartTable     = $Container->get(CartTable::class);
-        $CartItemTable = $Container->get(CartItemTable::class);
-        $hostname      = $Container->get('Config')['hostname'];
-        $Product       = $Container->get(Product::class);
+        $Container      = $Container->getServiceLocator();
+        $CartTable      = $Container->get(CartTable::class);
+        $CartItemTable  = $Container->get(CartItemTable::class);
+        $hostname       = $Container->get('Config')['hostname'];
+        $Product        = $Container->get(Product::class);
+        $CartItemFilter = $Container->get(CartItemFilter::class);
 
         return new CartController(
             $CartTable,
             $CartItemTable,
             $hostname,
-            $Product
+            $Product,
+            $CartItemFilter
         );
     }
 }

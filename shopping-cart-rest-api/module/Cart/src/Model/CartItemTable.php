@@ -12,7 +12,7 @@ class CartItemTable
         $this->TableGateway = $TableGateway;
     }
 
-    public function fetchCartItems($columns, $where, $joinToProducts = false)
+    public function fetchCartItems($columns, $where, $joinToProducts = false, $productColumns = array())
     {
         $select = $this->TableGateway->getSql()->select();
         if ($columns) {
@@ -22,8 +22,8 @@ class CartItemTable
         if ($joinToProducts) {
             $select->join(
                 array("p" => "products"),
-                "p.product_id = ci.product_id",
-                array('product_thumbnail', 'product_name', 'product_desc', 'price'),
+                "p.product_id = cart_items.product_id",
+                $productColumns,
                 "INNER"
             );
         }
@@ -46,4 +46,10 @@ class CartItemTable
         $update = $this->TableGateway->getSql()->update()->set($data)->where($where);
         $this->TableGateway->updateWith($update);
     }
+
+    public function deleteCartItems($cart_id)
+    {
+        $this->TableGateway->delete(['cart_id' => $cart_id]);
+    }
+
 }

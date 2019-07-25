@@ -20,7 +20,9 @@
         "psr-4": {
             "Application\\": "module/Application/src/",
             "Product\\": "module/Product/src/",
-            "Cart\\": "module/Cart/src/"
+            "Cart\\": "module/Cart/src/",
+            "Shipping\\": "module/Shipping/src/",
+            "Job\\": "module/Job/src/"
         }
     },
     "scripts": {

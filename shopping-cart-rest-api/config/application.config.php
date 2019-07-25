@@ -12,6 +12,8 @@ return array(
         'Application',
         'Product',
         'Cart',
+        'Shipping',
+        'Job',
         'ZF\ApiProblem',
     ),
 

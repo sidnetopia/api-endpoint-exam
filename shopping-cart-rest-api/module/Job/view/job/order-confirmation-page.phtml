@@ -1,0 +1,73 @@
+<?php if(isset($this->error_messages)) { ?>
+    <?php foreach ($this->error_messages as $key => $errors) { ?>
+        <?php foreach ( $errors as $message) { ?>
+            <div class="alert alert-danger">
+                • <?= $message?> <br>
+            </div>
+        <?php }?>
+    <?php } ?>
+<?php } else { ?>
+    <div class="row">
+        <div class="col-md-4">
+            <b>Order Id# <?= $this->job_order_id?> </b>
+        </div>
+        <div class="col-md-4 col-md-offset-4">
+            <b>Ship to:</b>
+            <br><br>
+            <b><?= $this->job->shipping_name?></b>
+            <br>
+            <?= $this->job->shipping_address1?><br>
+            <?= $this->job->shipping_address2?><br>
+            <?= $this->job->shipping_address3?><br>
+            <?= $this->job->shipping_country?><br>
+            <br>
+        </div>
+    </div>
+
+    <table class="table">
+        <tr style="background-color: #e1e6ed">
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+        <?php foreach ($this->job_items as $key => $job_item) { ?>
+                <tr>
+                    <td>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="/<?=$this->products[$key]->product_thumbnail?>" class="image"/>
+                            </div>
+                            <div class="col-md-4">
+                                <b> <?=$this->products[$key]->product_name ?></b>
+                                <br><br>
+                                <?=$this->products[$key]->product_desc ?>
+                                <br><br>
+                                <b><?=$this->products[$key]->price ?> each<b>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <?=$job_item->qty ?>
+                    </td>
+                    <td>
+                        <?=$job_item->price ?>
+                    </td>
+                </tr>
+            <?php } ?>
+        </table>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-md-offset-10">
+                    Subtotal:   <?= $this->job->sub_total ?><br><br>
+                    Shipping:   <?= $this->job->shipping_total ?><br><br>
+                    <span style='color: blue; font-weight: bold;'>Grand Total:   <?= $this->job->total_amount ?></span><br><br>
+                    <a href="/" class="btn btn-success btn-padding btn-square">Checkout</a>
+                </div>
+
+            </div>
+        </div>
+
+    </table>
+<?php }?>

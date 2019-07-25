@@ -1,14 +1,14 @@
 <?php
-namespace Cart\ServiceFactory\Filter;
+namespace Job\ServiceFactory\Filter;
 
-use Cart\Filter\CartItemFilter;
+use Job\Filter\JobFilter;
 use Psr\Container\ContainerInterface;
 
-class CartItemFilterFactory
+class JobFilterFactory
 {
     public function __invoke(ContainerInterface $Container)
     {
         $DbAdapter = $Container->get('test');
-        return new CartItemFilter($DbAdapter);
+        return new JobFilter($DbAdapter);
     }
 }

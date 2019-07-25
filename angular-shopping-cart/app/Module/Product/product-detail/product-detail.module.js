@@ -3,5 +3,6 @@
 // Define the `phoneDetail` module
 angular.module('productDetail', [
     'ngRoute',
-    'core.product'
+    'core.product',
+    'core.cart'
 ]);
