@@ -24,7 +24,7 @@
                     {{cartItem.qty}}
                 </td>
                 <td>
-                    {{cartItem.cart_item_price}}
+                    {{cartItem.item_price}}
                 </td>
             </tr>
     </table>
@@ -33,14 +33,11 @@
 <div class="container">
     <div class="row">
         <div class="col-md-3 col-md-offset-10">
-            Subtotal:       {{$ctrl.cart.cartDetails.sub_total}}<br><br>
-            Shipping:   {{$ctrl.cart.cartDetails.shipping_total}}<br><br>
-            <span style='color: red; font-weight: bold;'>Grand Total:   {{$ctrl.cart.cartDetails.total_amount}}</span><br><br>
-            <a href="<?=$this->url('shipping', ['action' => 'showShipping']);?>" class="btn btn-success btn-padding btn-square">Checkout</a>
+            Subtotal:       {{$ctrl.cartDetails.sub_total}}<br><br>
+            Shipping:   {{$ctrl.cartDetails.shipping_total}}<br><br>
+            <span style='color: red; font-weight: bold;'>Grand Total:   {{$ctrl.cartDetails.total_amount}}</span><br><br>
+            <a ng-href="/#!/shipping" class="btn btn-success btn-padding btn-square">Checkout</a>
         </div>
 
     </div>
 </div>
-
-<?php }?>
-

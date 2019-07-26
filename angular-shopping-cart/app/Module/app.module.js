@@ -7,5 +7,8 @@ angular.module('shoppingCartApp', [
   'core',
   'productList',
   'productDetail',
-  'cart'
+  'cart',
+  'shipping',
+  'payment',
+  'job'
 ]);

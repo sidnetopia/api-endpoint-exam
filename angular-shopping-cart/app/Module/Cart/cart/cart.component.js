@@ -6,10 +6,12 @@ angular
     .component('cart', {
         templateUrl: 'Module/Cart/cart/cart.template.html',
         controller: ['Cart',
-            function ProductListController(Cart) {
-            var self = this;
-                this.cart = Cart.query(function (cart) {
+            function CartController(Cart) {
+                var self = this;
+                Cart.query(function (cart) {
+                    console.log(cart.cartItems);
                     self.cartItems = cart.cartItems;
+                    self.cartDetails = cart.cartDetails;
                 });
             }
         ]

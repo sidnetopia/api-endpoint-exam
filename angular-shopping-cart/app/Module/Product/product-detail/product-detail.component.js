@@ -5,8 +5,8 @@ angular
     .module('productDetail')
     .component('productDetail', {
         templateUrl: 'Module/Product/product-detail/product-detail.template.html',
-        controller: ['$routeParams', 'Product', 'Cart',
-            function ProductDetailController($routeParams, Product, Cart) {
+        controller: ['$routeParams', '$location', 'Product', 'Cart',
+            function ProductDetailController($routeParams, $location, Product, Cart) {
                 var self = this;
 
                 self.productId = $routeParams.productId;
@@ -15,17 +15,27 @@ angular
                 });
 
                 self.qtyInput = 1;
+
                 self.onQtyInputChange = function () {
                     let price = this.qtyInput * self.product.price;
                     self.price = !isNaN(price) ? price : '';
                 };
+
                 self.addCartItem = function() {
-                    var data = {
+                    var inputData = {
                         qty: self.qtyInput,
                         product_id: self.productId
                     };
-                    // console.log(data);
-                    Cart.save();
+
+                    Cart.save(inputData, function(response){
+                        if (response.status >= 200 && response.status <= 300) {
+                            if (confirm(response.detail + "\nWould you like to view cart?")) {
+                                $location.path('/cart');
+                            }
+                        } else {
+                            alert(response.detail);
+                        }
+                    });
                     // response.success(function(data, status, headers, config) {
                     //     alert(JSON.stringify({data: data}));
                     // });

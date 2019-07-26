@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <b>Order Id# {{$ctrl.jobOrderDetails.product_thumbnail}} </b>
+        </div>
+        <div class="col-md-4 col-md-offset-4">
+            <b>Ship to:</b>
+            <br><br>
+            <b>{{$ctrl.jobOrderDetails.shipping_name}}</b>
+            <br>
+            {{$ctrl.jobOrderDetails.shipping_name}}<br>
+            {{$ctrl.jobOrderDetails.shipping_address1}}<br>
+            {{$ctrl.jobOrderDetails.shipping_address2}}<br>
+            {{$ctrl.jobOrderDetails.shipping_address3}}<br>
+            <br>
+        </div>
+    </div>
+
+    <table class="table">
+        <tr style="background-color: #e1e6ed">
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+        <tr ng-repeat="jobItem in $ctrl.jobItems">
+            <td>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img ng-src="{{jobItem.product_thumbnail}}"  class="image"/>
+                    </div>
+                    <div class="col-md-4">
+                        <b> {{jobItem.product_name}}</b>
+                        <br><br>
+                        {{jobItem.product_desc}}
+                        <br><br>
+                        <b>$ {{jobItem.price}} each</b>
+                    </div>
+                </div>
+            </td>
+            <td>
+                {{jobItem.qty}}
+            </td>
+            <td>
+                {{jobItem.item_price}}
+            </td>
+        </tr>
+    </table>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-md-offset-10">
+                Subtotal:    {{$ctrl.jobOrderDetails.sub_total}}<br><br>
+                Shipping:   {{$ctrl.jobOrderDetails.shipping_total}}<br><br>
+                <span style='color: blue; font-weight: bold;'>Grand Total:   {{$ctrl.jobOrderDetails.total_amount}}</span><br><br>
+                <a href="/" class="btn btn-success btn-padding btn-square">Continue Shopping</a>
+            </div>
+
+        </div>
+    </div>
+
+    </table>
+</div>

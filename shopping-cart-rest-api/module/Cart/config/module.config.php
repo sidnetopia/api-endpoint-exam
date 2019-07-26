@@ -30,11 +30,12 @@ return array(
         'invokables' => array(
             Filter\CartItemFilter::class => Filter\CartItemFilter::class,
             Model\Cart::class => Model\Cart::class,
-            Product\Model\Product::class => Product\Model\Product::class,
+            Product\Model\Product::class => Product\Model\Product::class
         ),
         'factories' => array(
             Model\CartTable::class => ServiceFactory\Model\CartTableFactory::class,
             Model\CartItemTable::class => ServiceFactory\Model\CartItemTableFactory::class,
+            Product\Model\ProductTable::class => Product\ServiceFactory\Model\ProductTableFactory::class
         ),
     ),
 );

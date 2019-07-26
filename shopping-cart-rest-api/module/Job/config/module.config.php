@@ -44,11 +44,13 @@ return array(
     'service_manager' => array(
         'factories' => array(
             Cart\Model\CartTable::class => Cart\ServiceFactory\Model\CartTableFactory::class,
+            Product\Model\ProductTable::class => Product\ServiceFactory\Model\ProductTableFactory::class,
             Model\JobOrderTable::class  => ServiceFactory\Model\JobOrderTableFactory::class,
             Model\JobItemsTable::class  => ServiceFactory\Model\JobItemsTableFactory::class
         ),
         'invokables' => array(
-           Model\JobOrder::class => Model\JobOrder::class
+            Model\JobOrder::class => Model\JobOrder::class,
+            Product\Model\Product::class => Product\Model\Product::class,
         ),
 //        'factories' => array(
 //            ProductTable::class   => ProductTableFactory::class,

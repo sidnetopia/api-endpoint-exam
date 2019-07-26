@@ -17,11 +17,28 @@ class JobItemsTable
         $this->TableGateway->insert($data);
     }
 
-    public function fetchJobItems($job_order_id, $columns)
+    public function fetchJobItems($columns, $where, $joinToProducts = false, $productColumns = array())
     {
-        $select = $this->TableGateway->getSql()->select()
-            ->columns($columns)->where(array('job_order_id' => $job_order_id));
-        $JobItems = $this->TableGateway->selectWith($select);
-        return $JobItems;
+        $select = $this->TableGateway->getSql()->select();
+        if ($columns) {
+            $select->columns($columns);
+        }
+
+        if ($joinToProducts) {
+            $select->join(
+                array("p" => "products"),
+                "p.product_id = job_items.product_id",
+                $productColumns,
+                "INNER"
+            );
+        }
+
+        if ($where) {
+            $select->where($where);
+        }
+
+        $CartItems = $this->TableGateway->selectWith($select);
+
+        return $CartItems;
     }
 }

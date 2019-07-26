@@ -12,6 +12,11 @@ class CartTable
         $this->TableGateway = $TableGateway;
     }
 
+    public function insertCart($data)
+    {
+        $this->TableGateway->insert($data);
+    }
+
     public function fetchCart($columns = null)
     {
         $select = $this->TableGateway->getSql()->select();

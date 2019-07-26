@@ -1,0 +1,31 @@
+<div class="container container-style">
+    <b>Shipping</b>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-1">
+            <form ng-submit="$ctrl.addShippingDetails()">
+                <br><b>Name</b><br>
+                <input type="text" name="shipping_name" ng-model="$ctrl.shipping_name" placeholder="John Doe" required maxlength="35"><br><br>
+                <b>Address 1</b><br>
+                <input type="text" name="shipping_address1" ng-model="$ctrl.shipping_address1" placeholder="Bldg No/Street Name" required maxlength="35"><br><br>
+                <b>Address 2</b><br>
+                <input type="text" name="shipping_address2" ng-model="$ctrl.shipping_address2" placeholder="Region" required maxlength="35"><br><br>
+                <b>Address 3</b><br>
+                <input type="number" name="shipping_address3" ng-model="$ctrl.shipping_address3" placeholder="Zip Code" required maxlength="35"><br><br>
+                <b>City</b><br>
+                <input type="text" name="shipping_city" ng-model="$ctrl.shipping_city" placeholder="Mandaluyong" required maxlength="35"><br><br>
+                <b>State</b><br>
+                <input type="text" name="shipping_state" ng-model="$ctrl.shipping_state" placeholder="Texas" required maxlength="35"><br><br>
+                <b>Country</b><br>
+                <input type="text" name="shipping_country" ng-model="$ctrl.shipping_country" placeholder="USA" required maxlength="35"><br><br>
+                <input type="radio" name="shipping_method" ng-model="$ctrl.shipping_method" value="Ground"> <b>Ground Shipping</b> &nbsp;&nbsp;&nbsp;
+                <b>$ {{$ctrl.shippingPayment.ground}}</b><br>
+                <input type="radio" name="shipping_method" ng-model="$ctrl.shipping_method" value="Expedited"> <b>Expedited Shipping</b>
+                &nbsp;<b>$ {{$ctrl.shippingPayment.expedited}}</b><br><br>
+                <button class="btn btn-success btn-padding btn-square" type="submit">Continue</button>
+            </form>
+        </div>
+    </div>
+</div>
+

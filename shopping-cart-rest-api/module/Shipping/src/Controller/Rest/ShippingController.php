@@ -91,4 +91,9 @@ class ShippingController extends AbstractRestfulController
             'expedited' => $expeditedShippingPayment
         ]]);
     }
+
+    public function options()
+    {
+        return new ApiProblemResponse(new ApiProblem(201, 'Internal Server Error' ));
+    }
 }

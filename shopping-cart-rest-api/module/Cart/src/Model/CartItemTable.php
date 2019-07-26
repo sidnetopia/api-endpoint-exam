@@ -31,6 +31,7 @@ class CartItemTable
         if ($where) {
             $select->where($where);
         }
+
         $CartItems = $this->TableGateway->selectWith($select);
 
         return $CartItems;

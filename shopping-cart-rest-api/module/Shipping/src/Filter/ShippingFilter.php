@@ -26,7 +26,7 @@ class ShippingFilter extends InputFilter
                 array(
                     'name' => 'Regex',
                     'options' => array(
-                        'pattern' => '/^[a-zA-Z]+$/',
+                        'pattern' => '/^[a-zA-Z .]+$/',
                         'messages' => array(
                             Regex::NOT_MATCH => 'Text only'
                         ),

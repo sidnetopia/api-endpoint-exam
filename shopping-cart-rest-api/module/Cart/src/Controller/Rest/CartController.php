@@ -13,6 +13,7 @@ use Cart\Model\CartItemTable;
 use Cart\Model\CartTable;
 use mysql_xdevapi\Exception;
 use Product\Model\Product;
+use Product\Model\ProductTable;
 use Zend\Db\Sql\Expression;
 use Zend\Mvc\Controller\AbstractRestfulController;
 use Zend\View\Model\JsonModel;
@@ -22,6 +23,7 @@ use ZF\ApiProblem\ApiProblemResponse;
 class CartController extends AbstractRestfulController
 {
     private $CartTable;
+    private $ProductTable;
     private $CartItemTable;
     private $hostname;
     private $Product;
@@ -29,6 +31,7 @@ class CartController extends AbstractRestfulController
 
     public function __construct(
         CartTable $CartTable,
+        ProductTable $ProductTable,
         CartItemTable $CartItemTable,
         $hostname,
         Product $Product,
@@ -37,6 +40,7 @@ class CartController extends AbstractRestfulController
     {
         $this->CartTable = $CartTable;
         $this->CartItemTable = $CartItemTable;
+        $this->ProductTable = $ProductTable;
         $this->hostname  = $hostname;
         $this->Product   = $Product;
         $this->CartItemFilter   = $CartItemFilter;
@@ -47,12 +51,13 @@ class CartController extends AbstractRestfulController
         try {
             $Cart = $this->CartTable->fetchCart(
                 ['cart_id', 'sub_total', 'shipping_total', 'total_amount'])->current();
-            $CartItems = $this->CartItemTable->fetchCartItems(['qty', 'price'],
-                ['cart_id' => $Cart->cart_id], true);
+            $CartItems = $this->CartItemTable->fetchCartItems(['qty', 'item_price' => 'price'],
+                ['cart_id' => $Cart->cart_id], true,['product_thumbnail', 'price', 'product_desc']);
 
         } catch (\Exception $e) {
-            return new ApiProblemResponse(new ApiProblem(500, 'Caught exception: ' . $e->getMessage()));
+            return new ApiProblemResponse(new ApiProblem(500, 'Internal Server Error'));
         }
+
 
         $cartItemArray = array();
         foreach ($CartItems as $key => $value) {
@@ -60,17 +65,19 @@ class CartController extends AbstractRestfulController
             $cartItemArray[$key]['product_thumbnail'] = $this->Product
                 ->getImagePath($value['product_thumbnail'], $this->hostname);
         }
-        
-        return new JsonModel(['cartItems' => $cartItemArray, 'cartDetails' => $Cart]);
+
+        return new JsonModel(['cartItems' => $cartItemArray, 'cartDetails' => get_object_vars($Cart)]);
     }
 
     public function create($data)
     {
-        return new ApiProblemResponse(new ApiProblem(201, 'Created'));
+        $subTotal = 0;
+        $totalWeight = 0;
+
         try {
             $cartId = $this->CartTable->fetchCart(['cart_id'])->current()->cart_id;
-            $data['cart_id'] = $cartId;
             $this->CartItemFilter->setData($data);
+
             if (!$this->CartItemFilter->isValid()) {
                 $error_messages = '';
                 foreach($this->CartItemFilter->getMessages() as $key=>$value) {
@@ -81,29 +88,60 @@ class CartController extends AbstractRestfulController
                 }
                 return new ApiProblemResponse(new ApiProblem(400, $error_messages));
             }
+
             $data = $this->CartItemFilter->getValues();
+            $data['cart_id'] = $cartId;
+            $productId = $data['product_id'];
             $cartItem = $this->CartItemTable->fetchCartItems(['cart_item_id'], [
-                    'cart_items.product_id' => $data['product_id'],
+                    'cart_items.product_id' => $productId,
                     'cart_id' => $data['cart_id'],
                 ], true,
                 ['weight', 'price'])->current();
 
             if ($cartItem) {
+                $subTotal = $cartItem->price*$data['qty'];
+                $totalWeight = $cartItem->weight*$data['qty'];
+
                 $cartItemData = array(
-                    'weight' => new Expression("weight + ".$cartItem->weight*$data['qty']),
+                    'weight' => new Expression("weight + ".$totalWeight),
                     'qty' => new Expression("qty + {$data['qty']}"),
-                    'price' => new Expression("price + ".$cartItem->price*$data['qty']),
+                    'price' => new Expression("price + ".$subTotal),
                 );
+
                 $this->CartItemTable->updateCartItem($cartItemData, ['cart_item_id' => $cartItem->cart_item_id]);
 
-                return new ApiProblemResponse(new ApiProblem(202, 'Updated'));
+                $code = 202;
+                $details = 'Item Updated!';
             } else {
+                $Product = $this->ProductTable->fetchProduct($productId);
+                $totalWeight = $Product->weight;
+                $subTotal = $Product->price;
+                $data['weight'] = $Product->weight;
+                $data['unit_price'] = $Product->price;
+                $data['price'] = $Product->price;
                 $this->CartItemTable->insertCartItem($data);
 
-                return new ApiProblemResponse(new ApiProblem(201, 'Created'));
+                $code = 201;
+                $details = 'Item Added!';
             }
+
+            $cartData = array(
+                'total_weight' => new Expression("total_weight + ".$totalWeight),
+                'sub_total' => new Expression("sub_total + ".$subTotal),
+                'total_amount' => new Expression("total_amount + ".$subTotal),
+            );
+
+            $this->CartTable->updateCart($cartData, ['cart_id' => $cartId]);
+
+            return new ApiProblemResponse(new ApiProblem($code, $details));
+
         } catch (\Exception $e) {
-            return new ApiProblemResponse(new ApiProblem(500, 'Caught exception: ' . $e->getMessage()));
+            return new ApiProblemResponse(new ApiProblem(500, 'Internal Server Error'));
         }
+    }
+
+    public function options()
+    {
+        return new ApiProblemResponse(new ApiProblem(500, 'Internal Server Error' ));
     }
 }
