@@ -22,6 +22,7 @@ class CartItemTableFactory
             null,
             $ResultSetPrototype
         );
+
         return new CartItemTable($TableGateway);
     }
 }

@@ -19,21 +19,12 @@ class ShippingControllerFactory
     {
         $Container = $Container->getServiceLocator();
         $CartTable = $Container->get(CartTable::class);
-//        $ShippingTable   = $Container->get(ShippingTable::class);
-//        $CartService = $Container->get(CartService::class);
         $ShippingService = $Container->get(ShippingService::class);
-//        $CartFilter      = $Container->get(CartFilter::class);
-//        $CustomerFilter  = $Container->get(CustomerFilter::class);
         $ShippingFilter  = $Container->get(ShippingFilter::class);
-//        $Session = $Container->get('\Shipping\Storage\ShippingSessionContainer');
 
         return new ShippingController(
             $CartTable,
-//            $ShippingTable,
-//            $CartService,
             $ShippingService,
-//            $CartFilter,
-//            $CustomerFilter,
             $ShippingFilter
         );
     }

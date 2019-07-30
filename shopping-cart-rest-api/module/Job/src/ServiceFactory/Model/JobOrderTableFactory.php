@@ -14,7 +14,6 @@ class JobOrderTableFactory
         // Creation for table gateway instance
         $DbAdapter = $Container->get('shopping_cart');
         $ResultSetPrototype = new ResultSet();
-        $ResultSetPrototype->setArrayObjectPrototype(new JobOrder());
 
         // create TableGateway instance
         $TableGateway = new TableGateway(

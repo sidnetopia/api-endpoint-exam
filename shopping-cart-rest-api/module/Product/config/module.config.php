@@ -1,32 +1,37 @@
 <?php
 namespace Product;
 
-return array(
-    'router' => array(
-        'routes' => array(
-            'product' => array(
+use Product\Controller\Rest\ProductController;
+use Product\ServiceFactory\Controller\Rest\ProductControllerFactory;
+use Product\Filter\ProductFilter;
+use Product\Model\ProductTable;
+use Product\ServiceFactory\Model\ProductTableFactory;
+
+return [
+    'router' => [
+        'routes' => [
+            'product' => [
                 'type' => 'Segment',
-                'options' => array(
+                'options' => [
                     'route' => '/product[/:id]',
-                    'defaults' => array(
-                        'controller' => Controller\Rest\ProductController::class,
-                    ),
-                ),
-            ),
-        ),
-    ),
-    'controllers' => array(
-        'factories' => array(
-            Controller\Rest\ProductController::class => ServiceFactory\Controller\Rest\ProductControllerFactory::class
-        ),
-    ),
-    'service_manager' => array(
-        'invokables' => array(
-            Filter\ProductFilter::class => Filter\ProductFilter::class,
-            Model\Product::class => Model\Product::class,
-        ),
-        'factories' => array(
-            Model\ProductTable::class => ServiceFactory\Model\ProductTableFactory::class,
-        ),
-    ),
-);
+                    'defaults' => [
+                        'controller' => ProductController::class
+                    ]
+                ]
+            ]
+        ]
+    ],
+    'controllers' => [
+        'factories' => [
+            ProductController::class => ProductControllerFactory::class
+        ]
+    ],
+    'service_manager' => [
+        'invokables' => [
+            ProductFilter::class => ProductFilter::class
+        ],
+        'factories' => [
+            ProductTable::class => ProductTableFactory::class
+        ]
+    ]
+];

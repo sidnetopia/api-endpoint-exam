@@ -1,4 +1,4 @@
 'use strict';
 
-// Define the `core.product` module
+// Define the `core.cart` module
 angular.module('core.cart', ['ngResource']);

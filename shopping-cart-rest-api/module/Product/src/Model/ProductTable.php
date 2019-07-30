@@ -12,19 +12,16 @@ class ProductTable
         $this->TableGateway = $TableGateway;
     }
 
-    public function fetchProductList()
+    public function fetchProducts($columns = null, $where = null)
     {
         $select = $this->TableGateway->getSql()->select();
-        $ProductList = $this->TableGateway->selectWith($select);
+        if ($columns)
+            $select->columns($columns);
+        if ($where)
+            $select->where($where);
 
-        return $ProductList;
-    }
+        $Product = $this->TableGateway->selectWith($select);
 
-    public function fetchProduct($product_id)
-    {
-        $where = array("product_id" => $product_id);
-        $select = $this->TableGateway->getSql()->select()->where($where);
-        $Product = $this->TableGateway->selectWith($select)->current();
         return $Product;
     }
 

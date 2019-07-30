@@ -36,12 +36,6 @@ angular
                             alert(response.detail);
                         }
                     });
-                    // response.success(function(data, status, headers, config) {
-                    //     alert(JSON.stringify({data: data}));
-                    // });
-                    // response.error(function(data, status, headers, config) {
-                    //     alert( "failure message: " + JSON.stringify({data: data}));
-                    // });
                 };
             }
         ],

@@ -9,7 +9,6 @@ angular
             function CartController(Cart) {
                 var self = this;
                 Cart.query(function (cart) {
-                    console.log(cart.cartItems);
                     self.cartItems = cart.cartItems;
                     self.cartDetails = cart.cartDetails;
                 });

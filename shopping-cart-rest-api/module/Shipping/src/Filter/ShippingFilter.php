@@ -178,5 +178,18 @@ class ShippingFilter extends InputFilter
             ),
         ));
     }
+
+    public function getErrorMessage()
+    {
+        $error_messages = '';
+        foreach($this->getMessages() as $key=>$value) {
+            $error_messages = $error_messages.$key;
+            foreach ($value as $messages) {
+                $error_messages = $error_messages." - ".$messages.",";
+            }
+        }
+
+        return $error_messages;
+    }
 }
 

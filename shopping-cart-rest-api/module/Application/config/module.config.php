@@ -2,9 +2,10 @@
 namespace Application;
 
 use Zend\Mvc\Router\Http\Literal;
-use Zend\Mvc\Router\Http\Segment;
+use Application\Controller\IndexController;
+use Application\ServiceFactory\Controller\IndexControllerFactory;
 
-return array(
+return [
     'hostname' => "http://localhost/",
     'router' => [
         'routes' => [
@@ -13,74 +14,74 @@ return array(
                 'options' => [
                     'route'    => '/',
                     'defaults' => [
-                        'controller' => Controller\IndexController::class,
+                        'controller' => IndexController::class,
                         'action'     => 'index',
-                    ],
-                ],
-            ],
-        ],
+                    ]
+                ]
+            ]
+        ]
     ],
-    'controllers' => array(
-        'factories' => array(
-            Controller\IndexController::class => ServiceFactory\Controller\IndexControllerFactory::class,
-        ),
-    ),
-    'service_manager' => array(
-        'abstract_factories' => array(
+    'controllers' => [
+        'factories' => [
+            IndexController::class => IndexControllerFactory::class,
+        ]
+    ],
+    'service_manager' => [
+        'abstract_factories' => [
             'Zend\Cache\Service\StorageCacheAbstractServiceFactory',
             'Zend\Log\LoggerAbstractServiceFactory',
-        ),
-        'factories' => array(
+        ],
+        'factories' => [
             'translator' => 'Zend\Mvc\Service\TranslatorServiceFactory',
             'ZF\ApiProblem\Listener\ApiProblemListener'             => 'ZF\ApiProblem\Factory\ApiProblemListenerFactory',
             'ZF\ApiProblem\Listener\RenderErrorListener'            => 'ZF\ApiProblem\Factory\RenderErrorListenerFactory',
             'ZF\ApiProblem\Listener\SendApiProblemResponseListener' => 'ZF\ApiProblem\Factory\SendApiProblemResponseListenerFactory',
             'ZF\ApiProblem\View\ApiProblemRenderer'                 => 'ZF\ApiProblem\Factory\ApiProblemRendererFactory',
             'ZF\ApiProblem\View\ApiProblemStrategy'                 => 'ZF\ApiProblem\Factory\ApiProblemStrategyFactory',
-        ),
+        ],
 
-        'aliases'   => array(
+        'aliases'   => [
             'ZF\ApiProblem\ApiProblemListener'  => 'ZF\ApiProblem\Listener\ApiProblemListener',
             'ZF\ApiProblem\RenderErrorListener' => 'ZF\ApiProblem\Listener\RenderErrorListener',
             'ZF\ApiProblem\ApiProblemRenderer'  => 'ZF\ApiProblem\View\ApiProblemRenderer',
             'ZF\ApiProblem\ApiProblemStrategy'  => 'ZF\ApiProblem\View\ApiProblemStrategy',
-        ),
-    ),
+        ]
+    ],
     
-    'translator' => array(
+    'translator' => [
         'locale' => 'en_US',
-        'translation_file_patterns' => array(
-            array(
+        'translation_file_patterns' => [
+            [
                 'type' => 'gettext',
                 'base_dir' => __DIR__ . '/../language',
                 'pattern' => '%s.mo',
-            ),
-        ),
-    ),
-    'view_manager' => array(
+            ],
+        ]
+    ],
+    'view_manager' => [
         'display_not_found_reason' => true,
         'display_exceptions' => true,
         'doctype' => 'HTML5',
         'not_found_template' => 'error/404',
         'exception_template' => 'error/index',
-        'template_map' => array(
+        'template_map' => [
             'layout/layout'    => __DIR__ . '/../view/layout/layout.phtml',
             'base/index/index' => __DIR__ . '/../view/base/index/index.phtml',
             'error/404'        => __DIR__ . '/../view/error/404.phtml',
             'error/index'      => __DIR__ . '/../view/error/index.phtml',
-        ),
-        'template_path_stack' => array(
+        ],
+        'template_path_stack' => [
             __DIR__ . '/../view',
-        ),
-        'strategies' => array(
+        ],
+        'strategies' => [
             'ViewJsonStrategy',
             'display_exceptions' => false
-        )
-    ),
+        ]
+    ],
     // Placeholder for console routes
-    'console' => array(
-        'router' => array(
-            'routes' => array(),
-        ),
-    ),
-);
+    'console' => [
+        'router' => [
+            'routes' => [],
+        ],
+    ]
+];

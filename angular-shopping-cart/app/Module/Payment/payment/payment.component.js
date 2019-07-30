@@ -12,12 +12,15 @@ angular
                 self.cart = Cart.query(function (cart) {
                     self.cartItems = cart.cartItems;
                     self.cartDetails = cart.cartDetails;
+                    if (self.cartDetails.shipping_total <= 0) {
+                        $location.path('/');
+                    }
                 });
 
                 self.addJobOrder = function() {
                     if (confirm("Confirm payment")) {
                         Job.save({}, function (response) {
-                            if (response.status >= 200 && response.status <= 300) {
+                            if (response.status >= 200 && response.status < 300) {
                                 $location.path('/job');
                             } else {
                                 alert(response.detail);

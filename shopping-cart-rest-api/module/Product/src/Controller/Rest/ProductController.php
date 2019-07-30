@@ -2,7 +2,6 @@
 
 namespace Product\Controller\Rest;
 
-use Product\Model\Product;
 use Product\Model\ProductTable;
 use Product\Filter\ProductFilter;
 use Zend\Mvc\Controller\AbstractRestfulController;
@@ -13,19 +12,16 @@ use ZF\ApiProblem\ApiProblemResponse;
 class ProductController extends AbstractRestfulController
 {
     private $ProductTable;
-    private $Product;
     private $ProductFilter;
     private $hostname;
 
     public function __construct(
         ProductTable $ProductTable,
-        Product $Product,
         ProductFilter $ProductFilter,
         $hostname
     )
     {
         $this->ProductTable = $ProductTable;
-        $this->Product = $Product;
         $this->ProductFilter = $ProductFilter;
         $this->hostname = $hostname;
     }
@@ -38,15 +34,21 @@ class ProductController extends AbstractRestfulController
     public function getList()
     {
         try {
-            $ProductList = $this->ProductTable->fetchProductList();
+            $ProductList = $this->ProductTable->fetchProducts([
+                'product_id',
+                'product_thumbnail',
+                'product_name',
+                'product_desc',
+                'price'
+            ]);
         } catch (\Exception $e) {
             return new ApiProblemResponse(new ApiProblem(500, 'Caught exception: ' . $e->getMessage()));
         }
 
-        $productListArray = $ProductList->toArray();
-        foreach ($productListArray as $key => $value) {
-            $productListArray[$key]['product_thumbnail'] = $this->Product
-                ->getImagePath($value['product_thumbnail'], $this->hostname);
+        $productListArray = [];
+        foreach ($ProductList as $key => $value) {
+            $productListArray[$key] = get_object_vars($value);
+            $productListArray[$key]['product_thumbnail'] = trim($value->product_thumbnail, $this->hostname);
         }
 
         return new JsonModel($productListArray);
@@ -63,18 +65,24 @@ class ProductController extends AbstractRestfulController
         $productId = $this->ProductFilter->sanitize(['productId' => $productId])['productId'];
 
         try {
-            $productDetails = $this->ProductTable->fetchProduct($productId);
-            if (!$productDetails) {
+            $ProductDetails = $this->ProductTable->fetchProducts([
+                'product_image',
+                'product_name',
+                'product_desc',
+                'stock_qty',
+                'price'
+            ], ['product_id' => $productId])->current();
+
+            if (!$ProductDetails) {
                 return new ApiProblemResponse(new ApiProblem(404, 'Entity not found'));
             }
         } catch (\Exception $e) {
             return new ApiProblemResponse(new ApiProblem(500, 'Caught exception: ' . $e->getMessage()));
         }
 
-        $phoneDetailsArray = get_object_vars($productDetails);
-        $phoneDetailsArray['product_image'] = $this->Product
-            ->getImagePath($phoneDetailsArray['product_image'], $this->hostname);
+        $productDetailsArray = get_object_vars($ProductDetails);
+        $productDetailsArray['product_image'] = trim($ProductDetails['product_image'], $this->hostname);
 
-        return new JsonModel($phoneDetailsArray);
+        return new JsonModel($productDetailsArray);
     }
 }

@@ -1,41 +1,47 @@
 <?php
-/**
- * ORDER PRECEDENCE FOR USING NAMESPACE
- * Controller->Model->Table->Service->Filter->Session
- * MODULES
- * Cart->CartItems->Products->Customers->JobOrder->JobItems->Shipping->Payment
- **/
 namespace Cart;
 
-return array(
-    'router' => array(
-        'routes' => array(
-            'cart' => array(
+use Cart\Controller\Rest\CartController;
+use Cart\ServiceFactory\Controller\Rest\CartControllerFactory;
+use Cart\Filter\CartItemFilter;
+use Cart\Model\Cart;
+use Product\Model\Product;
+use Cart\Model\CartTable;
+use Cart\ServiceFactory\Model\CartTableFactory;
+use Cart\Model\CartItemTable;
+use Cart\ServiceFactory\Model\CartItemTableFactory;
+use Product\Model\ProductTable;
+use Product\ServiceFactory\Model\ProductTableFactory;
+
+return [
+    'router' => [
+        'routes' => [
+            'cart' => [
                 'type' => 'Segment',
-                'options' => array(
+                'options' => [
                     'route' => '/cart[/:id]',
-                    'defaults' => array(
-                        'controller' => Controller\Rest\CartController::class,
-                    ),
-                ),
-            ),
-        ),
-    ),
-    'controllers' => array(
-        'factories' => array(
-            Controller\Rest\CartController::class => ServiceFactory\Controller\Rest\CartControllerFactory::class
-        ),
-    ),
-    'service_manager' => array(
-        'invokables' => array(
-            Filter\CartItemFilter::class => Filter\CartItemFilter::class,
-            Model\Cart::class => Model\Cart::class,
-            Product\Model\Product::class => Product\Model\Product::class
-        ),
-        'factories' => array(
-            Model\CartTable::class => ServiceFactory\Model\CartTableFactory::class,
-            Model\CartItemTable::class => ServiceFactory\Model\CartItemTableFactory::class,
-            Product\Model\ProductTable::class => Product\ServiceFactory\Model\ProductTableFactory::class
-        ),
-    ),
-);
+                    'defaults' => [
+                        'controller' => CartController::class,
+                    ]
+                ]
+            ]
+        ]
+    ],
+    'controllers' => [
+        'factories' => [
+            CartController::class => CartControllerFactory::class
+        ]
+    ],
+    'service_manager' => [
+        'invokables' => [
+            CartItemFilter::class => CartItemFilter::class,
+            Cart::class => Cart::class,
+            Product::class => Product::class
+        ],
+        'factories' => [
+            CartTable::class => CartTableFactory::class,
+            CartItemTable::class => CartItemTableFactory::class,
+            ProductTable::class => ProductTableFactory::class
+        ],
+    ]
+];
