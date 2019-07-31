@@ -4,6 +4,7 @@ namespace Job\ServiceFactory\Controller\Rest;
 use Application\Service\CoreService;
 use Cart\Model\CartItemTable;
 use Cart\Model\CartTable;
+use Cart\Service\CartService;
 use Job\Controller\Rest\JobController;
 use Job\Model\JobItemsTable;
 use Job\Model\JobOrderTable;
@@ -22,6 +23,7 @@ class JobControllerFactory
         $hostname       = $Container->get('Config')['hostname'];
         $CoreService    = $Container->get(CoreService::class);
         $Product        = $Container->get(Product::class);
+        $CartService    = $Container->get(CartService::class);
 
         return new JobController(
             $JobOrderTable,
@@ -30,7 +32,8 @@ class JobControllerFactory
             $CartItemTable,
             $hostname,
             $CoreService,
-            $Product
+            $Product,
+            $CartService
         );
     }
 }

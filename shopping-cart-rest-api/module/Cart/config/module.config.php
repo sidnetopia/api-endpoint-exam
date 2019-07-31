@@ -3,8 +3,10 @@ namespace Cart;
 
 use Application\Service\CoreService;
 use Cart\Controller\Rest\CartController;
+use Cart\Service\CartItemService;
+use Cart\Service\CartService;
 use Cart\ServiceFactory\Controller\Rest\CartControllerFactory;
-use Cart\Filter\CartItemFilter;
+use Product\Filter\ProductFilter;
 use Product\Model\Product;
 use Cart\Model\CartTable;
 use Cart\ServiceFactory\Model\CartTableFactory;
@@ -34,8 +36,10 @@ return [
     ],
     'service_manager' => [
         'invokables' => [
-            CartItemFilter::class => CartItemFilter::class,
+            ProductFilter::class => ProductFilter::class,
             CoreService::class => CoreService::class,
+            CartService::class => CartService::class,
+            CartItemService::class => CartItemService::class,
             Product::class => Product::class
         ],
         'factories' => [

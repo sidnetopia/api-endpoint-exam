@@ -20,7 +20,7 @@ class CoreFilter extends InputFilter
         return $error_messages;
     }
 
-    public function raiseError()
+    public function getErrors()
     {
         if (!$this->isValid()) {
             $error_messages = $this->getErrorMessage();

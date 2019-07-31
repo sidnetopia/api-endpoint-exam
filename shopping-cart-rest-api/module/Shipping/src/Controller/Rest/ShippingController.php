@@ -61,8 +61,8 @@ class ShippingController extends CoreController
         try {
             $Cart = $this->CartTable->fetchCart(['cart_id', 'total_weight'])->current();
             $this->ShippingFilter->setData($data);
-            if ($this->ShippingFilter->raiseError())
-                return $this->ShippingFilter->raiseError();
+            if ($this->ShippingFilter->getErrors())
+                return $this->ShippingFilter->getErrors();
 
             $data = $this->ShippingFilter->getValues();
 

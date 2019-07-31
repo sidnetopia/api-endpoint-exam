@@ -13,6 +13,7 @@ class ProductTableFactory
     {
         $DbAdapter = $Container->get('shopping_cart');
         $ResultSetPrototype = new ResultSet();
+
         $TableGateway = new TableGateway(
             'products',
             $DbAdapter,

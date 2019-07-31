@@ -105,7 +105,7 @@ class ShippingFilter extends CoreFilter
                 array(
                     'name' => 'Regex',
                     'options' => array(
-                        'pattern' => '/^[a-zA-Z]+$/',
+                        'pattern' => '/^[a-zA-Z ]+$/',
                         'messages' => array(
                             Regex::NOT_MATCH => 'Text only'
                         ),
@@ -126,7 +126,7 @@ class ShippingFilter extends CoreFilter
                 array(
                     'name' => 'Regex',
                     'options' => array(
-                        'pattern' => '/^[a-zA-Z]+$/',
+                        'pattern' => '/^[a-zA-Z ]+$/',
                         'messages' => array(
                             Regex::NOT_MATCH => 'Text only'
                         ),
@@ -160,7 +160,7 @@ class ShippingFilter extends CoreFilter
                 array(
                     'name' => 'Regex',
                     'options' => array(
-                        'pattern' => '/^[a-zA-Z]+$/',
+                        'pattern' => '/^[a-zA-Z ]+$/',
                         'messages' => array(
                             Regex::NOT_MATCH => 'Text only'
                         ),

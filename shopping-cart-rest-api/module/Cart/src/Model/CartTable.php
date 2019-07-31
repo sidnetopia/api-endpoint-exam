@@ -56,28 +56,4 @@ class CartTable
 
         $this->updateCart($cartData, ['cart_id' => $cartId]);
     }
-
-    public function deleteAndCreateCart(CartItemTable $CartItemTable, $cartId)
-    {
-        try{
-            $CartItemTable->deleteCartItems($cartId);
-            $this->deleteCart($cartId);
-
-            $data = array(
-                'order_datetime' => new Expression("NOW()"),
-            );
-
-            $this->insertCart($data);
-
-            $code = 202;
-            $details = 'Accepted';
-
-        } catch (\Exception $e) {
-            $code = 500;
-            $details = 'Internal Server Error';
-        }
-
-        return ['code' => $code, 'details' => $details];
-    }
-
 }

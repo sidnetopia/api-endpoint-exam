@@ -17,7 +17,7 @@ class JobItemsTable
         $this->TableGateway->insert($data);
     }
 
-    public function fetchJobItems($columns, $where, $joinToProducts = false, $productColumns = array())
+    public function fetchJobItems($columns = null, $where = null, $productColumns = array())
     {
         $select = $this->TableGateway->getSql()->select();
 
@@ -25,7 +25,7 @@ class JobItemsTable
             $select->columns($columns);
         }
 
-        if ($joinToProducts) {
+        if (!empty($productColumns)) {
             $select->join(
                 array("p" => "products"),
                 "p.product_id = job_items.product_id",

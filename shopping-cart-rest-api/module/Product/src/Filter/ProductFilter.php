@@ -8,10 +8,32 @@ class ProductFilter extends CoreFilter
     public function __construct()
     {
         $this->add(array(
-            'name' => 'productId',
+            'name' => 'product_id',
+            'required' => true,
             'filters' => array(
                 array('name' => 'StripTags'),
                 array('name' => 'StringTrim'),
+            ),
+        ));
+    }
+
+    public function addQtyValidator($stockQty)
+    {
+        $this->add(array(
+            'name' => 'qty',
+            'required' => true,
+            'filters' => array(
+                array('name' => 'StripTags'),
+                array('name' => 'StringTrim'),
+            ),
+            'validators' => array(
+                array(
+                    'name' => 'Between',
+                    'options' => array(
+                        'min' => 1,
+                        'max' => $stockQty
+                    ),
+                ),
             ),
         ));
     }

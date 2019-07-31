@@ -3,9 +3,10 @@ namespace Cart\ServiceFactory\Controller\Rest;
 
 use Application\Service\CoreService;
 use Cart\Controller\Rest\CartController;
-use Cart\Filter\CartItemFilter;
 use Cart\Model\CartItemTable;
 use Cart\Model\CartTable;
+use Cart\Service\CartItemService;
+use Product\Filter\ProductFilter;
 use Product\Model\Product;
 use Product\Model\ProductTable;
 use Psr\Container\ContainerInterface;
@@ -21,16 +22,18 @@ class CartControllerFactory
         $CoreService    = $Container->get(CoreService::class);
         $Product        = $Container->get(Product::class);
         $hostname       = $Container->get('Config')['hostname'];
-        $CartItemFilter = $Container->get(CartItemFilter::class);
+        $ProductFilter  = $Container->get(ProductFilter::class);
+        $CartItemService    = $Container->get(CartItemService::class);
 
         return new CartController(
             $CartTable,
             $ProductTable,
             $CartItemTable,
             $hostname,
-            $CartItemFilter,
+            $ProductFilter,
             $CoreService,
-            $Product
+            $Product,
+            $CartItemService
         );
     }
 }

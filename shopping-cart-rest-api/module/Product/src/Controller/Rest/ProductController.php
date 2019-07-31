@@ -1,5 +1,4 @@
 <?php
-
 namespace Product\Controller\Rest;
 
 use Application\Controller\CoreController;
@@ -89,7 +88,7 @@ class ProductController extends CoreController
             return new ApiProblemResponse(new ApiProblem($response['code'], $response['details']));
 
         $productDetailsArray = get_object_vars($ProductDetails);
-        $productDetailsArray = $this->Product->getImagePath($productDetailsArray, $this->hostname); #
+        $productDetailsArray = $this->Product->getImagePath($productDetailsArray, $this->hostname);
 
         return new JsonModel($productDetailsArray);
     }

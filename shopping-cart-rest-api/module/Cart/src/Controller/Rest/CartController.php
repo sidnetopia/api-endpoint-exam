@@ -3,9 +3,10 @@ namespace Cart\Controller\Rest;
 
 use Application\Controller\CoreController;
 use Application\Service\CoreService;
-use Cart\Filter\CartItemFilter;
 use Cart\Model\CartItemTable;
 use Cart\Model\CartTable;
+use Cart\Service\CartItemService;
+use Product\Filter\ProductFilter;
 use Product\Model\Product;
 use Product\Model\ProductTable;
 use Zend\View\Model\JsonModel;
@@ -18,27 +19,30 @@ class CartController extends CoreController
     private $ProductTable;
     private $CartItemTable;
     private $hostname;
-    private $CartItemFilter;
+    private $ProductFilter;
     private $CoreService;
     private $Product;
+    private $CartItemService;
 
     public function __construct(
         CartTable $CartTable,
         ProductTable $ProductTable,
         CartItemTable $CartItemTable,
         $hostname,
-        CartItemFilter $CartItemFilter,
+        ProductFilter $ProductFilter,
         CoreService $CoreService,
-        Product $Product
+        Product $Product,
+        CartItemService $CartItemService
     )
     {
         $this->CartTable = $CartTable;
         $this->CartItemTable = $CartItemTable;
         $this->ProductTable = $ProductTable;
-        $this->hostname  = $hostname;
-        $this->CartItemFilter = $CartItemFilter;
+        $this->hostname = $hostname;
+        $this->ProductFilter = $ProductFilter;
         $this->CoreService = $CoreService;
         $this->Product = $Product;
+        $this->CartItemService = $CartItemService;
     }
 
     /**
@@ -53,7 +57,7 @@ class CartController extends CoreController
             $Cart = $this->CartTable->fetchCart(
                 ['cart_id', 'sub_total', 'shipping_total', 'total_amount'])->current();
             $CartItems = $this->CartItemTable->fetchCartItems(['qty', 'item_price' => 'price'],
-                ['cart_id' => $Cart->cart_id], true,['product_thumbnail', 'price', 'product_desc']);
+                ['cart_id' => $Cart->cart_id], ['product_thumbnail', 'price', 'product_desc']);
 
         } catch (\Exception $e) {
             return new ApiProblemResponse(new ApiProblem(500, 'Internal Server Error'));
@@ -76,31 +80,41 @@ class CartController extends CoreController
     {
         try {
             $cartId = $this->CartTable->fetchLatestCartId();
-            $this->CartItemFilter->setData($data);
-            if ($this->CartItemFilter->raiseError())
-                return $this->CartItemFilter->raiseError();
+            $productId = $this->ProductFilter->sanitize(['product_id' => $data['product_id']])['product_id'];
+            $Product = $this->ProductTable->fetchProducts(['weight', 'price', 'stock_qty'],
+                ['product_id' => $productId])->current();
 
-            $data = $this->CartItemFilter->getValues();
+            if (!$Product)
+                return new ApiProblemResponse(new ApiProblem(404, 'Not Found'));
+
+            $this->ProductFilter->addQtyValidator($Product->stock_qty);
+            $this->ProductFilter->setData($data);
+            if ($this->ProductFilter->getErrors())
+                return $this->ProductFilter->getErrors();
+
+            $data = $this->ProductFilter->getValues();
             $data['cart_id'] = $cartId;
-            $productId = $data['product_id'];
+
 
             $CartItem = $this->CartItemTable->fetchCartItems(['cart_item_id'], [
                 'product_id' => $productId,
                 'cart_id' => $cartId,
             ])->current();
 
-            $Product = $this->ProductTable->fetchProducts(['weight', 'price'],
-                ['product_id' => $productId])->current();
-
-            $cartItemDetails = $this->CartItemTable
-                                ->insertOrUpdateCartItem($CartItem, $data ,$Product->weight, $Product->price);
+            $cartItemDetails = $this->CartItemService->insertOrUpdateCartItem(
+                $CartItem,
+                $Product,
+                $this->CartItemTable,
+                $data
+            );
 
             $cartItemTotals = $cartItemDetails['cartItemTotals'];
+            $subTotal = $cartItemTotals['subTotal'];
 
             $this->CartTable->updateCartTotals(
                 $cartItemTotals['totalWeight'],
-                $cartItemTotals['subTotal'],
-                $cartItemTotals['subTotal'],
+                $subTotal,
+                $subTotal,
                 $cartId
             );
 
@@ -111,5 +125,4 @@ class CartController extends CoreController
 
         return new ApiProblemResponse(new ApiProblem($response['code'], $response['details']));
     }
-
 }

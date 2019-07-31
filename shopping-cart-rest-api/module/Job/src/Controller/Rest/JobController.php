@@ -5,6 +5,7 @@ use Application\Controller\CoreController;
 use Application\Service\CoreService;
 use Cart\Model\CartItemTable;
 use Cart\Model\CartTable;
+use Cart\Service\CartService;
 use Job\Model\JobItemsTable;
 use Job\Model\JobOrderTable;
 use Product\Model\Product;
@@ -21,24 +22,27 @@ class JobController extends CoreController
     private $hostname;
     private $CoreService;
     private $Product;
+    private $CartService;
 
     public function __construct(
-        JobOrderTable  $JobOrderTable,
-        JobItemsTable  $JobItemsTable,
-        CartTable      $CartTable,
-        CartItemTable  $CartItemTable,
+        JobOrderTable $JobOrderTable,
+        JobItemsTable $JobItemsTable,
+        CartTable $CartTable,
+        CartItemTable $CartItemTable,
         $hostname,
         CoreService $CoreService,
-        Product $Product
+        Product $Product,
+        CartService $CartService
     )
     {
-        $this->JobOrderTable  =  $JobOrderTable;
-        $this->JobItemsTable  =  $JobItemsTable;
+        $this->JobOrderTable = $JobOrderTable;
+        $this->JobItemsTable = $JobItemsTable;
         $this->CartTable = $CartTable;
         $this->CartItemTable = $CartItemTable;
         $this->hostname = $hostname;
         $this->CoreService = $CoreService;
         $this->Product = $Product;
+        $this->CartService = $CartService;
     }
 
     /**
@@ -50,8 +54,7 @@ class JobController extends CoreController
     public function getList()
     {
         try {
-            $JobOrder = $this->JobOrderTable->fetchJobOrder(
-                [
+            $JobOrder = $this->JobOrderTable->fetchJobOrder([
                     'job_order_id',
                     'shipping_name',
                     'shipping_address1',
@@ -62,7 +65,7 @@ class JobController extends CoreController
                     'total_amount'
                 ])->current();
             $JobItems = $this->JobItemsTable->fetchJobItems(['qty', 'item_price' => 'price'],
-                ['job_order_id' => $JobOrder->job_order_id], true,[
+                ['job_order_id' => $JobOrder->job_order_id],  [
                     'product_thumbnail',
                     'price',
                     'product_desc'
@@ -106,14 +109,14 @@ class JobController extends CoreController
                 'qty',
                 'unit_price',
                 'price'
-                ], ['cart_id' => $cartId]);
+            ], ['cart_id' => $cartId]);
 
             foreach ($CartItems as $CartItem) {
                 $CartItem->job_order_id = $jobOrderId;
                 $this->JobItemsTable->insertJobItem(get_object_vars($CartItem));
             }
 
-            $response = $this->CartTable->deleteAndCreateCart($this->CartItemTable, $cartId);
+            $response = $this->CartService->deleteAndCreateCart($this->CartItemTable, $this->CartTable, $cartId);
         } catch (\Exception $e) {
             $response = ['code' => 500, 'details' => 'Internal Server Error'];
         }
