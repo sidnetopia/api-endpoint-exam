@@ -1,16 +1,16 @@
 <?php
 namespace Shipping\Controller\Rest;
 
+use Application\Controller\CoreController;
 use Cart\Model\CartTable;
 use Shipping\Service\ShippingService;
 use Shipping\Filter\ShippingFilter;
 use Zend\Db\Sql\Expression;
-use Zend\Mvc\Controller\AbstractRestfulController;
 use Zend\View\Model\JsonModel;
 use ZF\ApiProblem\ApiProblem;
 use ZF\ApiProblem\ApiProblemResponse;
 
-class ShippingController extends AbstractRestfulController
+class ShippingController extends CoreController
 {
     private $ShippingService;
     private $ShippingFilter;
@@ -61,10 +61,8 @@ class ShippingController extends AbstractRestfulController
         try {
             $Cart = $this->CartTable->fetchCart(['cart_id', 'total_weight'])->current();
             $this->ShippingFilter->setData($data);
-            if (!$this->ShippingFilter->isValid()) {
-                $error_messages = $this->ShippingFilter->getErrorMessage();
-                return new ApiProblemResponse(new ApiProblem(400, $error_messages));
-            }
+            if ($this->ShippingFilter->raiseError())
+                return $this->ShippingFilter->raiseError();
 
             $data = $this->ShippingFilter->getValues();
 
@@ -76,13 +74,11 @@ class ShippingController extends AbstractRestfulController
 
             $this->CartTable->updateCart($data, ['cart_id' => $Cart->cart_id]);
 
-            return new ApiProblemResponse(new ApiProblem(202, 'Accepted'));
+            $response = ['code' => 200, 'details' => 'Accepted'];
         } catch (\Exception $e) {
-            return new ApiProblemResponse(new ApiProblem(500, 'Caught exception: ' . $e->getMessage()));
+            $response = ['code' => 500, 'details' => 'Internal Server Error'];
         }
-    }
 
-    public function options()
-    {
+        return new ApiProblemResponse(new ApiProblem($response['code'], $response['details']));
     }
 }

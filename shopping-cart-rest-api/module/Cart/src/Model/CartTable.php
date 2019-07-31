@@ -1,6 +1,7 @@
 <?php
 namespace Cart\Model;
 
+use Zend\Db\Sql\Expression;
 use Zend\Db\TableGateway\TableGateway;
 
 class CartTable
@@ -39,4 +40,44 @@ class CartTable
     {
         $this->TableGateway->delete(['cart_id' => $cart_id]);
     }
+
+    public function fetchLatestCartId()
+    {
+        return $this->fetchCart(['cart_id'])->current()->cart_id;
+    }
+
+    public function updateCartTotals($totalWeight, $subTotal, $totalAmount, $cartId)
+    {
+        $cartData = array(
+            'total_weight' => new Expression("total_weight + {$totalWeight}"),
+            'sub_total' => new Expression("sub_total + {$subTotal}"),
+            'total_amount' => new Expression("total_amount + {$totalAmount}"),
+        );
+
+        $this->updateCart($cartData, ['cart_id' => $cartId]);
+    }
+
+    public function deleteAndCreateCart(CartItemTable $CartItemTable, $cartId)
+    {
+        try{
+            $CartItemTable->deleteCartItems($cartId);
+            $this->deleteCart($cartId);
+
+            $data = array(
+                'order_datetime' => new Expression("NOW()"),
+            );
+
+            $this->insertCart($data);
+
+            $code = 202;
+            $details = 'Accepted';
+
+        } catch (\Exception $e) {
+            $code = 500;
+            $details = 'Internal Server Error';
+        }
+
+        return ['code' => $code, 'details' => $details];
+    }
+
 }

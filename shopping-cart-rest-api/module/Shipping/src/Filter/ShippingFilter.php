@@ -1,10 +1,10 @@
 <?php
 namespace Shipping\Filter;
 
-use Zend\InputFilter\InputFilter;
+use Application\Filter\CoreFilter;
 use Zend\Validator\Regex;
 
-class ShippingFilter extends InputFilter
+class ShippingFilter extends CoreFilter
 {
     public function __construct()
     {
@@ -177,19 +177,6 @@ class ShippingFilter extends InputFilter
                 array('name' => 'StringTrim'),
             ),
         ));
-    }
-
-    public function getErrorMessage()
-    {
-        $error_messages = '';
-        foreach($this->getMessages() as $key=>$value) {
-            $error_messages = $error_messages.$key;
-            foreach ($value as $messages) {
-                $error_messages = $error_messages." - ".$messages.",";
-            }
-        }
-
-        return $error_messages;
     }
 }
 

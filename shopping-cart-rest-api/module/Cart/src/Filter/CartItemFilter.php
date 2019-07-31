@@ -1,11 +1,9 @@
 <?php
 namespace Cart\Filter;
 
-use Zend\InputFilter\InputFilter;
-use Zend\Validator\Db\RecordExists;
-use Zend\Validator\NotEmpty;
+use Application\Filter\CoreFilter;
 
-class CartItemFilter extends InputFilter
+class CartItemFilter extends CoreFilter
 {
     public function __construct()
     {
@@ -25,18 +23,5 @@ class CartItemFilter extends InputFilter
                 array('name' => 'StringTrim'),
             ),
         ));
-    }
-
-    public function getErrorMessage()
-    {
-        $error_messages = '';
-        foreach($this->getMessages() as $key=>$value) {
-            $error_messages = $error_messages.$key;
-            foreach ($value as $messages) {
-                $error_messages = $error_messages." - ".$messages.",";
-            }
-        }
-
-        return $error_messages;
     }
 }

@@ -1,6 +1,7 @@
 <?php
 namespace Product\ServiceFactory\Controller\Rest;
 
+use Application\Service\CoreService;
 use Product\Controller\Rest\ProductController;
 use Product\Model\Product;
 use Product\Model\ProductTable;
@@ -14,12 +15,16 @@ class ProductControllerFactory
         $Container      =  $Container->getServiceLocator();
         $ProductTable   =  $Container->get(ProductTable::class);
         $ProductFilter  =  $Container->get(ProductFilter::class);
-        $hostname         =  $Container->get('Config')['hostname'];
+        $hostname       =  $Container->get('Config')['hostname'];
+        $Product        =  $Container->get(Product::class);
+        $CoreService    =  $Container->get(CoreService::class);
 
         return new ProductController(
             $ProductTable,
             $ProductFilter,
-            $hostname
+            $hostname,
+            $Product,
+            $CoreService
         );
     }
 }

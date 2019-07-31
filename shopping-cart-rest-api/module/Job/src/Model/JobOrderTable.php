@@ -22,9 +22,11 @@ class JobOrderTable
     public function fetchJobOrder($columns = null)
     {
         $select = $this->TableGateway->getSql()->select();
+
         if($columns){
             $select->columns($columns);
         }
+
         $select->order('job_order_id DESC');
         $Job = $this->TableGateway->selectWith($select);
 

@@ -11,7 +11,6 @@ use Job\Model\JobOrderTable;
 use Job\ServiceFactory\Model\JobOrderTableFactory;
 use Job\Model\JobItemsTable;
 use Job\ServiceFactory\Model\JobItemsTableFactory;
-use Job\Model\JobOrder;
 
 return [
     'router' => [
@@ -39,9 +38,6 @@ return [
             JobOrderTable::class  => JobOrderTableFactory::class,
             JobItemsTable::class  => JobItemsTableFactory::class
         ],
-        'invokables' => [
-            JobOrder::class => JobOrder::class
-        ]
     ],
     'view_manager' => [
         'template_map' => [

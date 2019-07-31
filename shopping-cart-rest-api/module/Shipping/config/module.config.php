@@ -6,6 +6,7 @@ use Shipping\ServiceFactory\Controller\Rest\ShippingControllerFactory;
 use Cart\Model\CartTable;
 use Cart\ServiceFactory\Model\CartTableFactory;
 use Shipping\Model\ShippingTable;
+use Shipping\Filter\ShippingFilter;
 use Shipping\ServiceFactory\Model\ShippingTableFactory;
 use Shipping\Service\ShippingService;
 use Shipping\ServiceFactory\Service\ShippingServiceFactory;
@@ -31,7 +32,7 @@ return [
     ],
     'service_manager' => [
         'invokables' => [
-          Filter\ShippingFilter::class => Filter\ShippingFilter::class
+          ShippingFilter::class => ShippingFilter::class
         ],
         'factories' => [
             CartTable::class => CartTableFactory::class,

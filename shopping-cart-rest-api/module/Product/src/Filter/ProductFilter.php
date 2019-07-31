@@ -1,10 +1,9 @@
 <?php
 namespace Product\Filter;
 
-use Zend\InputFilter\InputFilter;
-use Zend\Validator\NotEmpty;
+use Application\Filter\CoreFilter;
 
-class ProductFilter extends InputFilter
+class ProductFilter extends CoreFilter
 {
     public function __construct()
     {

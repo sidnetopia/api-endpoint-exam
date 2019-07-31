@@ -20,6 +20,7 @@ class JobItemsTable
     public function fetchJobItems($columns, $where, $joinToProducts = false, $productColumns = array())
     {
         $select = $this->TableGateway->getSql()->select();
+
         if ($columns) {
             $select->columns($columns);
         }

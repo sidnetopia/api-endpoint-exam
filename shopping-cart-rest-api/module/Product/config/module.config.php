@@ -1,7 +1,9 @@
 <?php
 namespace Product;
 
+use Application\Service\CoreService;
 use Product\Controller\Rest\ProductController;
+use Product\Model\Product;
 use Product\ServiceFactory\Controller\Rest\ProductControllerFactory;
 use Product\Filter\ProductFilter;
 use Product\Model\ProductTable;
@@ -28,7 +30,9 @@ return [
     ],
     'service_manager' => [
         'invokables' => [
-            ProductFilter::class => ProductFilter::class
+            ProductFilter::class => ProductFilter::class,
+            CoreService::class => CoreService::class,
+            Product::class => Product::class
         ],
         'factories' => [
             ProductTable::class => ProductTableFactory::class

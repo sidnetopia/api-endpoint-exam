@@ -21,6 +21,7 @@ class ShippingTableFactory
             null,
             $ResultSetPrototype
         );
+
         return new ShippingTable($TableGateway);
     }
 }

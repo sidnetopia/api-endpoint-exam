@@ -1,30 +1,35 @@
 <?php
 namespace Job\Controller\Rest;
 
+use Application\Controller\CoreController;
+use Application\Service\CoreService;
 use Cart\Model\CartItemTable;
 use Cart\Model\CartTable;
 use Job\Model\JobItemsTable;
 use Job\Model\JobOrderTable;
-use Zend\Db\Sql\Expression;
-use Zend\Mvc\Controller\AbstractRestfulController;
+use Product\Model\Product;
 use Zend\View\Model\JsonModel;
 use ZF\ApiProblem\ApiProblem;
 use ZF\ApiProblem\ApiProblemResponse;
 
-class JobController extends AbstractRestfulController
+class JobController extends CoreController
 {
     private $JobOrderTable;
     private $JobItemsTable;
     private $CartTable;
     private $CartItemTable;
     private $hostname;
+    private $CoreService;
+    private $Product;
 
     public function __construct(
         JobOrderTable  $JobOrderTable,
         JobItemsTable  $JobItemsTable,
         CartTable      $CartTable,
         CartItemTable  $CartItemTable,
-        $hostname
+        $hostname,
+        CoreService $CoreService,
+        Product $Product
     )
     {
         $this->JobOrderTable  =  $JobOrderTable;
@@ -32,10 +37,13 @@ class JobController extends AbstractRestfulController
         $this->CartTable = $CartTable;
         $this->CartItemTable = $CartItemTable;
         $this->hostname = $hostname;
+        $this->CoreService = $CoreService;
+        $this->Product = $Product;
     }
 
     /**
      * Get job items and job order details
+     * Return error if failed
      *
      * @return mixed|JsonModel|ApiProblemResponse
      */
@@ -60,11 +68,8 @@ class JobController extends AbstractRestfulController
                     'product_desc'
                 ]);
 
-            $jobItemArray = [];
-            foreach ($JobItems as $key => $value) {
-                $jobItemArray[$key] = $value;
-                $jobItemArray[$key]['product_thumbnail'] = trim($value['product_thumbnail'], $this->hostname);
-            }
+            $jobItemArray = $this->CoreService
+                ->transformToArrayWithFunction($JobItems, array($this->Product, 'getImagePath'), $this->hostname);
 
             return new JsonModel(['jobItems' => $jobItemArray, 'jobOrderDetails' => get_object_vars($JobOrder)]);
         } catch (\Exception $e) {
@@ -75,6 +80,7 @@ class JobController extends AbstractRestfulController
     /**
      * Transfer cart details and items to job order and job items.
      * Delete cart and create new one.
+     * Return error if failed
      *
      * @param mixed $data
      * @return mixed|ApiProblemResponse
@@ -107,38 +113,11 @@ class JobController extends AbstractRestfulController
                 $this->JobItemsTable->insertJobItem(get_object_vars($CartItem));
             }
 
-            return $this->deleteAndCreateCart($cartId);
+            $response = $this->CartTable->deleteAndCreateCart($this->CartItemTable, $cartId);
         } catch (\Exception $e) {
-            return new ApiProblemResponse(new ApiProblem(500, 'Internal Server Error'));
+            $response = ['code' => 500, 'details' => 'Internal Server Error'];
         }
-    }
 
-    /**
-     * Delete cart and create new one.
-     *
-     * @param $cartId
-     * @return ApiProblemResponse
-     */
-    private function deleteAndCreateCart($cartId)
-    {
-        try{
-            $this->CartItemTable->deleteCartItems($cartId);
-            $this->CartTable->deleteCart($cartId);
-
-            $data = array(
-                'order_datetime' => new Expression("NOW()"),
-            );
-
-            $this->CartTable->insertCart($data);
-
-            return new ApiProblemResponse(new ApiProblem(202, 'Accepted: '));
-
-        } catch (\Exception $e) {
-            return new ApiProblemResponse(new ApiProblem(500, 'Internal Server Error'));
-        }
-    }
-
-    public function options()
-    {
+        return new ApiProblemResponse(new ApiProblem($response['code'], $response['details']));
     }
 }

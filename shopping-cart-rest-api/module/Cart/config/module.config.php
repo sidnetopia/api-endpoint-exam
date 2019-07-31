@@ -1,10 +1,10 @@
 <?php
 namespace Cart;
 
+use Application\Service\CoreService;
 use Cart\Controller\Rest\CartController;
 use Cart\ServiceFactory\Controller\Rest\CartControllerFactory;
 use Cart\Filter\CartItemFilter;
-use Cart\Model\Cart;
 use Product\Model\Product;
 use Cart\Model\CartTable;
 use Cart\ServiceFactory\Model\CartTableFactory;
@@ -35,7 +35,7 @@ return [
     'service_manager' => [
         'invokables' => [
             CartItemFilter::class => CartItemFilter::class,
-            Cart::class => Cart::class,
+            CoreService::class => CoreService::class,
             Product::class => Product::class
         ],
         'factories' => [
