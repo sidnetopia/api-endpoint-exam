@@ -66,7 +66,7 @@ class ProductController extends CoreController
      */
     public function get($productId)
     {
-        $productId = $this->ProductFilter->sanitize(['productId' => $productId])['productId'];
+        $productId = $this->ProductFilter->sanitize(['product_id' => $productId])['product_id'];
 
         try {
             $ProductDetails = $this->ProductTable->fetchProducts([
