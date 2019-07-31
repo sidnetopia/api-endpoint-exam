@@ -1,6 +1,6 @@
 'use strict';
 
-// Register `productList` component, along with its associated controller and template
+// Register `job` component, along with its associated controller and template
 angular
     .module('job')
     .component('job', {

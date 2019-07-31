@@ -1,6 +1,6 @@
 'use strict';
 
-// Define the `phoneDetail` module
+// Define the `cart` module
 angular.module('cart', [
     'ngRoute',
     'core.cart'

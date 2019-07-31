@@ -102,9 +102,9 @@ class CartController extends CoreController
             ])->current();
 
             $cartItemDetails = $this->CartItemService->insertOrUpdateCartItem(
+                $this->CartItemTable,
                 $CartItem,
                 $Product,
-                $this->CartItemTable,
                 $data
             );
 

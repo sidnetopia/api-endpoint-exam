@@ -17,15 +17,10 @@ class ShippingService
 
     public function calculateShippingFee($weight, $price = 0)
     {
-
         $maxWeight = $this->ShippingList[$this->ShippingListSize]['max_weight'];
 
-        if (fmod($weight , 1) > 0) {
-            $shippingRate = $this->ShippingList[0]['shipping_rate'];
-            $price = $price + $shippingRate;
-            $extraWeight = $weight - (fmod($weight , 1));
-
-            return $this->calculateShippingFee($extraWeight, $price);
+        if ($weight <= 0) {
+            return $price;
         }
 
         if ($weight > $maxWeight) {
@@ -36,10 +31,13 @@ class ShippingService
             return $this->calculateShippingFee($extraWeight, $price);
         }
 
-        if ($weight <= 0) {
-            return $price;
-        }
+        if (fmod($weight , 1) > 0) {
+            $shippingRate = $this->ShippingList[0]['shipping_rate'];
+            $price = $price + $shippingRate;
+            $extraWeight = $weight - (fmod($weight , 1));
 
+            return $this->calculateShippingFee($extraWeight, $price);
+        }
 
         foreach ($this->ShippingList as $shipping) {
             if ($weight >= $shipping['min_weight'] && $weight <= $shipping['max_weight']) {

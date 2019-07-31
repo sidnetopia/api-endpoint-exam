@@ -1,4 +1,4 @@
 'use strict';
 
-// Define the `productList` module
+// Define the `job` module
 angular.module('job', ['core.job']);

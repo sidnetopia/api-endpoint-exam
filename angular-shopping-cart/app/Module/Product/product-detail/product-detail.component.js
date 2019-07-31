@@ -21,15 +21,15 @@ angular
                     self.price = !isNaN(price) ? price : '';
                 };
 
-                self.addCartItem = function() {
+                self.addCartItem = function () {
                     var inputData = {
                         qty: self.qtyInput,
                         product_id: self.productId
                     };
 
-                    Cart.save(inputData, function(response){
+                    Cart.save(inputData, function (response) {
                         if (response.status >= 200 && response.status <= 300) {
-                            if (confirm(response.detail + "\nWould you like to view cart?")) {
+                            if (confirm(response.detail + "\nWould you like to view your cart?")) {
                                 $location.path('/cart');
                             }
                         } else {

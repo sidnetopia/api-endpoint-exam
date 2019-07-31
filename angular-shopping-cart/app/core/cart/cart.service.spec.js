@@ -3,7 +3,7 @@
 describe('Cart', function () {
     var $httpBackend;
     var Cart;
-    var cartsData = [
+    var cartData = [
         {
             cartItems: [],
             cartDetails: {}
@@ -16,12 +16,12 @@ describe('Cart', function () {
     });
 
     // Load the module that contains the `Cart` service before each test
-    beforeEach(module('core.product'));
+    beforeEach(module('core.cart'));
 
     // Instantiate the service and "train" `$httpBackend` before each test
     beforeEach(inject(function (_$httpBackend_, _Cart_) {
         $httpBackend = _$httpBackend_;
-        $httpBackend.expectGET('http://training.local/cart').respond(cartsData);
+        $httpBackend.expectGET('http://training.local/cart').respond(cartData);
 
         Cart = _Cart_;
     }));
@@ -32,13 +32,13 @@ describe('Cart', function () {
         $httpBackend.verifyNoOutstandingRequest();
     });
 
-    it('should fetch the products from `http://training.local/cart`', function () {
-        var carts = Cart.query();
+    it('should fetch the carts from `http://training.local/cart`', function () {
+        var cart = Cart.query();
 
-        expect(carts).toEqual([]);
+        expect(cart).toEqual([]);
 
         $httpBackend.flush();
-        expect(carts).toEqual(cartsData);
+        expect(cart).toEqual(cartData);
     });
 
 });

@@ -1,6 +1,6 @@
 'use strict';
 
-// Register `productList` component, along with its associated controller and template
+// Register `payment` component, along with its associated controller and template
 angular
     .module('payment')
     .component('payment', {
@@ -13,12 +13,13 @@ angular
                     self.cartItems = cart.cartItems;
                     self.cartDetails = cart.cartDetails;
                     if (self.cartDetails.shipping_total <= 0) {
+                        alert('Shipping not yet set!');
                         $location.path('/');
                     }
                 });
 
                 self.addJobOrder = function() {
-                    if (confirm("Confirm payment")) {
+                    if (confirm("Please confirm your order.")) {
                         Job.save({}, function (response) {
                             if (response.status >= 200 && response.status < 300) {
                                 $location.path('/job');

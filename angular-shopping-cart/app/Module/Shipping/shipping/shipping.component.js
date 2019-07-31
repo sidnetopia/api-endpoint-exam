@@ -1,12 +1,12 @@
 'use strict';
 
-// Register `productList` component, along with its associated controller and template
+// Register `shipping` component, along with its associated controller and template
 angular
     .module('shipping')
     .component('shipping', {
         templateUrl: 'Module/Shipping/shipping/shipping.template.html',
         controller: ['Shipping', '$location',
-            function ProductListController(Shipping, $location) {
+            function ShippingController(Shipping, $location) {
                 var self = this;
 
                 Shipping.query(function (shipping) {

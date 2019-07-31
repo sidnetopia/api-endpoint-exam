@@ -6,7 +6,7 @@ use Zend\Db\Sql\Expression;
 
 class CartItemService
 {
-    public function insertOrUpdateCartItem($CartItem, $Product, CartItemTable $CartItemTable, $data)
+    public function insertOrUpdateCartItem(CartItemTable $CartItemTable ,$CartItem, $Product, $data)
     {
         $qty = $data['qty'];
         $totalWeight = $qty * $Product->weight;

@@ -31,6 +31,7 @@ class ShippingController extends CoreController
 
     /**
      * Get shipping prices
+     * Return error if failed
      *
      * @return mixed|JsonModel
      */
@@ -52,6 +53,7 @@ class ShippingController extends CoreController
 
     /**
      * Update shipping details in cart
+     * Return error if failed
      *
      * @param mixed $data
      * @return mixed|ApiProblemResponse
