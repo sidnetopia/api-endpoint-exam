@@ -78,7 +78,7 @@ class ProductController extends CoreController
             ], ['product_id' => $productId])->current();
 
             if (!$ProductDetails) {
-                $response = ['code' => 404, 'details' => 'Entity not found'];
+                $response = ['code' => 404, 'details' => 'Product not found']; //naming (responseError)
             }
         } catch (\Exception $e) {
             $response = ['code' => 500, 'details' => 'Internal Server Error'];

@@ -7,7 +7,7 @@ class ProductFilter extends CoreFilter
 {
     public function __construct()
     {
-        $this->add(array(
+        $this->add(array( //int
             'name' => 'product_id',
             'required' => true,
             'filters' => array(
@@ -41,6 +41,7 @@ class ProductFilter extends CoreFilter
     public function sanitize($data)
     {
         $this->setData($data);
+
         return $this->getValues();
     }
 }

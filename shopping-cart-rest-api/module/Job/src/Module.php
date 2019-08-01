@@ -12,12 +12,6 @@ class Module
         $EventManager        = $e->getApplication()->getEventManager();
         $ModuleRouteListener = new ModuleRouteListener();
         $ModuleRouteListener->attach($EventManager);
-
-        # SESSION FOR BASE LAYOUT
-        $ViewModel = $e->getApplication()->getMvcEvent()->getViewModel();
-        $Session = new Container();
-        $ViewModel->customer_id = $Session->offsetExists('customer_id') ? $Session->offsetGet('customer_id') : null;
-        $ViewModel->customer_name = $Session->offsetExists('customer_name') ? $Session->offsetGet('customer_name') : null;
     }
 
     public function getConfig()

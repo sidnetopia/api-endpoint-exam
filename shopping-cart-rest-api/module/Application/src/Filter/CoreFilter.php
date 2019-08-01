@@ -24,7 +24,8 @@ class CoreFilter extends InputFilter
     {
         if (!$this->isValid()) {
             $error_messages = $this->getErrorMessage();
-            return new ApiProblemResponse(new ApiProblem(400, $error_messages));
+            //array
+            return new ApiProblemResponse(new ApiProblem(400, $error_messages)); //sa controller apiproblemresponse
         }
 
         return;

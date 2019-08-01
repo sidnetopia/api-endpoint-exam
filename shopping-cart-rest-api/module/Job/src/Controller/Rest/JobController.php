@@ -54,18 +54,18 @@ class JobController extends CoreController
     public function getList()
     {
         try {
-            $JobOrder = $this->JobOrderTable->fetchJobOrder([
-                    'job_order_id',
-                    'shipping_name',
-                    'shipping_address1',
-                    'shipping_address2',
-                    'shipping_address3',
-                    'sub_total',
-                    'shipping_total',
-                    'total_amount'
-                ])->current();
+            $JobOrder = $this->JobOrderTable->fetchJobOrder([ // single and multiple rowset
+                'job_order_id',
+                'shipping_name',
+                'shipping_address1',
+                'shipping_address2',
+                'shipping_address3',
+                'sub_total',
+                'shipping_total',
+                'total_amount'
+            ])->current(); // ->to models
             $JobItems = $this->JobItemsTable->fetchJobItems(['qty', 'item_price' => 'price'],
-                ['job_order_id' => $JobOrder->job_order_id],  [
+                ['job_order_id' => $JobOrder->job_order_id], [
                     'product_thumbnail',
                     'price',
                     'product_desc'
@@ -111,10 +111,12 @@ class JobController extends CoreController
                 'price'
             ], ['cart_id' => $cartId]);
 
-            foreach ($CartItems as $CartItem) {
+            foreach ($CartItems as $CartItem) { //gawan ng function
                 $CartItem->job_order_id = $jobOrderId;
                 $this->JobItemsTable->insertJobItem(get_object_vars($CartItem));
             }
+
+//            $this->JobItemsTable->insertMultipleCartItemsToJobItems($CartItems, $jobOrderId);
 
             $response = $this->CartService->deleteAndCreateCart($this->CartItemTable, $this->CartTable, $cartId);
         } catch (\Exception $e) {

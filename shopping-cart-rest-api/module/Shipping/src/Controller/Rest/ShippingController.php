@@ -24,9 +24,9 @@ class ShippingController extends CoreController
     )
     {
 
-        $this->CartTable       = $CartTable;
+        $this->CartTable = $CartTable;
         $this->ShippingService = $ShippingService;
-        $this->ShippingFilter  = $ShippingFilter;
+        $this->ShippingFilter = $ShippingFilter;
     }
 
     /**
@@ -38,6 +38,8 @@ class ShippingController extends CoreController
     public function getList()
     {
         $total_weight = $this->CartTable->fetchCart(['total_weight'])->current()->total_weight;
+
+        $total_weight = $this->ShippingService->prepareWeight($total_weight);
 
         $this->ShippingService->setShippingMethod('Ground');
         $groundShippingPayment = $this->ShippingService->calculateShippingFee($total_weight);
@@ -60,7 +62,6 @@ class ShippingController extends CoreController
      */
     public function create($data)
     {
-
         try {
             $Cart = $this->CartTable->fetchCart(['cart_id', 'total_weight'])->current();
             $this->ShippingFilter->setData($data);
@@ -70,7 +71,8 @@ class ShippingController extends CoreController
             $data = $this->ShippingFilter->getValues();
 
             $this->ShippingService->setShippingMethod($data['shipping_mehod']);
-            $shippingPrice = $this->ShippingService->calculateShippingFee($Cart->total_weight);
+            $total_weight = $this->ShippingService->prepareWeight($Cart->total_weight);
+            $shippingPrice = $this->ShippingService->calculateShippingFee($total_weight);
 
             $data['shipping_total'] = $shippingPrice;
             $data['total_amount'] = new Expression("total_amount + {$shippingPrice}");

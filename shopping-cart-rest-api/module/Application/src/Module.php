@@ -12,19 +12,18 @@ class Module
         $ModuleRouteListener = new ModuleRouteListener();
         $ModuleRouteListener->attach($EventManager);
 
-        //Attach render errors
-        $EventManager->attach(MvcEvent::EVENT_RENDER_ERROR, function($e)  {
-            if ($e->getParam('exception')) {
-                $this->exception( $e->getParam('exception') ) ; //Custom error render function.
-            }
-        } );
-        //Attach dispatch errors
-        $EventManager->attach(MvcEvent::EVENT_DISPATCH_ERROR, function($e)  {
-            if ($e->getParam('exception')) {
-                $this->exception( $e->getParam('exception') ) ;//Custom error render function.
-            }
-        } );
-
+//        //Attach render errors
+//        $EventManager->attach(MvcEvent::EVENT_RENDER_ERROR, function($e)  {
+//            if ($e->getParam('exception')) {
+//                $this->exception( $e->getParam('exception') ) ; //Custom error render function.
+//            }
+//        } );
+//        //Attach dispatch errors
+//        $EventManager->attach(MvcEvent::EVENT_DISPATCH_ERROR, function($e)  {
+//            if ($e->getParam('exception')) {
+//                $this->exception( $e->getParam('exception') ) ;//Custom error render function.
+//            }
+//        } );
     }
 
     public function getConfig()
@@ -42,9 +41,9 @@ class Module
             ),
         );
     }
-
-    public function exception($e) {
-        echo "<span style='font-family: courier new; padding: 2px 5px; background:red; color: white;'> " . $e->getMessage() . '</span><br/>' ;
-        echo "<pre>" . $e->getTraceAsString() . '</pre>' ;
-    }
+//
+//    public function exception($e) {
+//        echo "<span style='font-family: courier new; padding: 2px 5px; background:red; color: white;'> " . $e->getMessage() . '</span><br/>' ;
+//        echo "<pre>" . $e->getTraceAsString() . '</pre>' ;
+//    }
 }

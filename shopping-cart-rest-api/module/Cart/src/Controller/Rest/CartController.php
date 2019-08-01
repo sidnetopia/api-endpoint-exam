@@ -96,16 +96,16 @@ class CartController extends CoreController
             $data['cart_id'] = $cartId;
 
 
-            $CartItem = $this->CartItemTable->fetchCartItems(['cart_item_id'], [
+            $cartItemId = $this->CartItemTable->fetchCartItems(['cart_item_id'], [
                 'product_id' => $productId,
                 'cart_id' => $cartId,
-            ])->current();
+            ])->current()->cart_item_id;
 
             $cartItemDetails = $this->CartItemService->insertOrUpdateCartItem(
                 $this->CartItemTable,
-                $CartItem,
                 $Product,
-                $data
+                $data,
+                $cartItemId
             );
 
             $cartItemTotals = $cartItemDetails['cartItemTotals'];

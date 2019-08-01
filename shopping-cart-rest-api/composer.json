@@ -25,6 +25,12 @@
             "Job\\": "module/Job/src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "ApplicationTest\\": "module/Application/test/",
+            "ProductTest\\": "module/Product/test/"
+        }
+    },
     "scripts": {
             "serve": "php -S 0.0.0.0:8080 -t public/ public/index.php"
         },

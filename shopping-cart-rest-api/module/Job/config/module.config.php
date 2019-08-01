@@ -2,6 +2,7 @@
 namespace Job;
 
 use Job\Controller\Rest\JobController;
+use Job\Service\JobItemService;
 use Job\ServiceFactory\Controller\Rest\JobControllerFactory;
 use Cart\Model\CartTable;
 use Cart\ServiceFactory\Model\CartTableFactory;

@@ -42,4 +42,19 @@ class JobItemsTable
 
         return $CartItems;
     }
+
+    public function insertMultipleCartItemsToJobItems($CartItems, $jobOrderId)
+    {
+        $query = 'INSERT INTO ' . $this->TableGateway->getTable().
+            ' (`job_order_id`, `product_id`, `weight`, `qty`, `unit_price`, `price`) VALUES ';
+
+        $queryVals = array();
+        foreach ($CartItems as $CartItem) {
+            $CartItem->job_order_id = $jobOrderId;
+            $queryVals[] = '(' . implode(',', get_object_vars($CartItem)) . ')';
+        }
+
+        $this->TableGateway->getAdapter()->getDriver()->getConnection()
+            ->execute($query . implode(',', $queryVals));
+    }
 }

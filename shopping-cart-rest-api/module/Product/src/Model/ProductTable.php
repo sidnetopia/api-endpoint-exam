@@ -15,7 +15,7 @@ class ProductTable
     public function fetchProducts($columns = null, $where = null)
     {
         $select = $this->TableGateway->getSql()->select();
-        if ($columns)
+        if ($columns) //brackets
             $select->columns($columns);
         if ($where)
             $select->where($where);
