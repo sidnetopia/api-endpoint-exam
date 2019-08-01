@@ -4,30 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/shopping-cart-rest-api/module/Cart/src/Controller/Rest/CartController.php" line="71" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38c69a41-6133-4d01-9a6c-cf1755f645ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Product/test/Controller/Rest/ProductControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shopping-cart-rest-api/phpunit.xml.dist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-shopping-cart/app/Module/Job/job/job.template.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-shopping-cart/app/Module/Job/job/job.template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-cart-rest-api/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-cart-rest-api/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-cart-rest-api/config/application.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/config/application.config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/src/Filter/CoreFilter.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/src/Filter/CoreFilter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/src/Module.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/src/Module.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/src/Service/CoreService.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Application/src/Service/CoreService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-cart-rest-api/module/Cart/src/Controller/Rest/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Cart/src/Controller/Rest/CartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-cart-rest-api/module/Cart/src/Service/CartItemService.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Cart/src/Service/CartItemService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-cart-rest-api/module/Cart/src/Service/CartService.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Cart/src/Service/CartService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-cart-rest-api/module/Job/config/module.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Job/config/module.config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-cart-rest-api/module/Job/src/Controller/Rest/JobController.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Job/src/Controller/Rest/JobController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-cart-rest-api/module/Job/src/Model/JobItemsTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Job/src/Model/JobItemsTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-cart-rest-api/module/Job/src/Module.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Job/src/Module.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/Controller/Rest/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/Controller/Rest/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/Filter/ProductFilter.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/Filter/ProductFilter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/Model/ProductTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/Model/ProductTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-cart-rest-api/module/Shipping/src/Controller/Rest/ShippingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Shipping/src/Controller/Rest/ShippingController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-cart-rest-api/module/Shipping/src/Service/ShippingService.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart-rest-api/module/Shipping/src/Service/ShippingService.php" afterDir="false" />
-    </list>
+    <list default="true" id="38c69a41-6133-4d01-9a6c-cf1755f645ab" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,50 +19,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shopping-cart-rest-api/module/Shipping/src/Controller/Rest/ShippingController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1190">
-              <caret line="77" column="86" selection-start-line="77" selection-start-column="11" selection-end-line="77" selection-end-column="86" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shopping-cart-rest-api/module/Job/src/Controller/Rest/JobController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="671">
-              <caret line="115" column="46" lean-forward="true" selection-start-line="115" selection-start-column="46" selection-end-line="115" selection-end-column="46" />
-              <folding>
-                <element signature="e#38#80#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/shopping-cart-rest-api/module/Job/src/Model/JobItemsTable.php">
+        <entry file="file://$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/Model/ProductTable.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="561">
+              <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shopping-cart-rest-api/module/Cart/src/Model/CartTable.php">
+        <entry file="file://$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/Model/Product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shopping-cart-rest-api/module/Job/src/Module.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
+            <state relative-caret-position="51">
+              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -309,17 +256,6 @@
             <path>
               <item name="api-endpoint exam" type="b2602c69:ProjectViewProjectNode" />
               <item name="api-endpoint exam" type="462c0819:PsiDirectoryNode" />
-              <item name="angular-shopping-cart" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-endpoint exam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-endpoint exam" type="462c0819:PsiDirectoryNode" />
-              <item name="angular-shopping-cart" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-endpoint exam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-endpoint exam" type="462c0819:PsiDirectoryNode" />
               <item name="shopping-cart-rest-api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -333,14 +269,14 @@
               <item name="api-endpoint exam" type="462c0819:PsiDirectoryNode" />
               <item name="shopping-cart-rest-api" type="462c0819:PsiDirectoryNode" />
               <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="Cart" type="462c0819:PsiDirectoryNode" />
+              <item name="Product" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="api-endpoint exam" type="b2602c69:ProjectViewProjectNode" />
               <item name="api-endpoint exam" type="462c0819:PsiDirectoryNode" />
               <item name="shopping-cart-rest-api" type="462c0819:PsiDirectoryNode" />
               <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="Cart" type="462c0819:PsiDirectoryNode" />
+              <item name="Product" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -348,115 +284,9 @@
               <item name="api-endpoint exam" type="462c0819:PsiDirectoryNode" />
               <item name="shopping-cart-rest-api" type="462c0819:PsiDirectoryNode" />
               <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="Cart" type="462c0819:PsiDirectoryNode" />
+              <item name="Product" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-endpoint exam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-endpoint exam" type="462c0819:PsiDirectoryNode" />
-              <item name="shopping-cart-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="Job" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-endpoint exam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-endpoint exam" type="462c0819:PsiDirectoryNode" />
-              <item name="shopping-cart-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="Job" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-endpoint exam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-endpoint exam" type="462c0819:PsiDirectoryNode" />
-              <item name="shopping-cart-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="Job" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-endpoint exam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-endpoint exam" type="462c0819:PsiDirectoryNode" />
-              <item name="shopping-cart-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="Job" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-              <item name="Rest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-endpoint exam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-endpoint exam" type="462c0819:PsiDirectoryNode" />
-              <item name="shopping-cart-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="Job" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ServiceFactory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-endpoint exam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-endpoint exam" type="462c0819:PsiDirectoryNode" />
-              <item name="shopping-cart-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="Job" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ServiceFactory" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-endpoint exam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-endpoint exam" type="462c0819:PsiDirectoryNode" />
-              <item name="shopping-cart-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="Job" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ServiceFactory" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-              <item name="Rest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-endpoint exam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-endpoint exam" type="462c0819:PsiDirectoryNode" />
-              <item name="shopping-cart-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="Product" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-endpoint exam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-endpoint exam" type="462c0819:PsiDirectoryNode" />
-              <item name="shopping-cart-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="Product" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-endpoint exam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-endpoint exam" type="462c0819:PsiDirectoryNode" />
-              <item name="shopping-cart-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="Product" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-endpoint exam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-endpoint exam" type="462c0819:PsiDirectoryNode" />
-              <item name="shopping-cart-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="Product" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-endpoint exam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-endpoint exam" type="462c0819:PsiDirectoryNode" />
-              <item name="shopping-cart-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="Product" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-              <item name="Rest" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -564,7 +394,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="199755000" />
+    <option name="totallyTimeSpent" value="199777000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -596,9 +426,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/shopping-cart-rest-api/config/autoload/local.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/shopping-cart-rest-api/config/application.config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1224">
@@ -795,13 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/Model/ProductTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="14" column="42" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/Controller/Rest/ProductController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="625">
@@ -941,6 +761,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
           <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/Model/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping-cart-rest-api/module/Product/src/Model/ProductTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
         </state>
       </provider>
     </entry>
