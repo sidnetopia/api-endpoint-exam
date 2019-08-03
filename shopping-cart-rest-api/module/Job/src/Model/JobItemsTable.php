@@ -1,6 +1,7 @@
 <?php
 namespace Job\Model;
 
+use Zend\Db\Sql\Insert;
 use Zend\Db\TableGateway\TableGateway;
 
 class JobItemsTable
@@ -45,16 +46,20 @@ class JobItemsTable
 
     public function insertMultipleCartItemsToJobItems($CartItems, $jobOrderId)
     {
-        $query = 'INSERT INTO ' . $this->TableGateway->getTable().
-            ' (`job_order_id`, `product_id`, `weight`, `qty`, `unit_price`, `price`) VALUES ';
-
-        $queryVals = array();
+        $insert = $this->TableGateway->getSql()->insert();
         foreach ($CartItems as $CartItem) {
-            $CartItem->job_order_id = $jobOrderId;
-            $queryVals[] = '(' . implode(',', get_object_vars($CartItem)) . ')';
+            $relation = array(
+                'weight' => $CartItem->weight,
+                'qty' => $CartItem->qty,
+                'unit_price' => $CartItem->unit_price,
+                'price' => $CartItem->price,
+                'job_order_id' => $jobOrderId,
+                'product_id' => $CartItem->product_id
+            );
+
+            $insert->values($relation, Insert::VALUES_MERGE);
         }
 
-        $this->TableGateway->getAdapter()->getDriver()->getConnection()
-            ->execute($query . implode(',', $queryVals));
+        $this->TableGateway->insertWith($insert);
     }
 }

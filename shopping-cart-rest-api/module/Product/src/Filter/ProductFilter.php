@@ -14,6 +14,11 @@ class ProductFilter extends CoreFilter
                 array('name' => 'StripTags'),
                 array('name' => 'StringTrim'),
             ),
+            'validators' => array(
+                array(
+                    'name' => 'Digits',
+                ),
+            ),
         ));
     }
 

@@ -10,7 +10,7 @@ use Zend\ServiceManager\ServiceManager;
 
 class ProductControllerTest extends AbstractHttpControllerTestCase
 {
-    protected $traceError = false;
+    protected $traceError = true;
     protected $ProductTable;
 
     public function setUp()
@@ -27,7 +27,7 @@ class ProductControllerTest extends AbstractHttpControllerTestCase
         ));
         parent::setUp();
 
-        $this->configureServiceManager($this->getApplicationServiceLocator());
+//        $this->configureServiceManager($this->getApplicationServiceLocator());
 //        $services = $this->getApplicationServiceLocator();
 //        $config = $services->get('config');
 //        unset($config['db']);
@@ -36,34 +36,34 @@ class ProductControllerTest extends AbstractHttpControllerTestCase
 //        $services->setAllowOverride(false);
     }
 
-    protected function configureServiceManager(ServiceManager $services)
-    {
-        $services->setAllowOverride(true);
-
-        $services->setService('config', $this->updateConfig($services->get('config')));
-        $services->setService(ProductTable::class, $this->mockProductTable()->reveal());
-
-        $services->setAllowOverride(false);
-    }
-
-    protected function updateConfig($config)
-    {
-        $config['db'] = [];
-        return $config;
-    }
-
-    protected function mockProductTable()
-    {
-        $this->ProductTable = $this->prophesize(ProductTable::class);
-        return $this->ProductTable;
-    }
+//    protected function configureServiceManager(ServiceManager $services)
+//    {
+//        $services->setAllowOverride(true);
+//
+//        $services->setService('config', $this->updateConfig($services->get('config')));
+//        $services->setService(ProductTable::class, $this->mockProductTable()->reveal());
+//
+//        $services->setAllowOverride(false);
+//    }
+//
+//    protected function updateConfig($config)
+//    {
+//        $config['db'] = [];
+//        return $config;
+//    }
+//
+//    protected function mockProductTable()
+//    {
+//        $this->ProductTable = $this->prophesize(ProductTable::class);
+//        return $this->ProductTable;
+//    }
 
     public function testGetListCanBeAccessed()
     {
 //        $this->ProductTable->fetchProducts()->willReturn();
-        $this->ProductTable
-            ->fetchProducts()
-            ->shouldBeCalled();
+//        $this->ProductTable
+//            ->fetchProducts()
+//            ->shouldBeCalled();
 
         $this->dispatch('/product', 'GET');
         $this->assertResponseStatusCode(200);

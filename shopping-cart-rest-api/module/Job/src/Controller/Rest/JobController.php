@@ -54,7 +54,7 @@ class JobController extends CoreController
     public function getList()
     {
         try {
-            $JobOrder = $this->JobOrderTable->fetchJobOrder([ // single and multiple rowset
+            $JobOrder = $this->JobOrderTable->fetchJobOrder([ // single and multiple columns
                 'job_order_id',
                 'shipping_name',
                 'shipping_address1',
@@ -101,7 +101,7 @@ class JobController extends CoreController
             $cartId = $cartArray['cart_id'];
             unset($cartArray['cart_id']);
 
-            $jobOrderId = $this->JobOrderTable->insertJobOrder($cartArray);
+            $jobOrderId = 156;
 
             $CartItems = $this->CartItemTable->fetchCartItems([
                 'product_id',

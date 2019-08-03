@@ -41,21 +41,19 @@ class ProductController extends CoreController
     public function getList()
     {
         try {
-            $ProductList = $this->ProductTable->fetchProducts([
-                'product_id',
-                'product_thumbnail',
-                'product_name',
-                'product_desc',
-                'price'
-            ]);
+            $ProductList = $this->ProductTable->fetchProducts();
+
         } catch (\Exception $e) {
             return new ApiProblemResponse(new ApiProblem(500, 'Internal Server Error'));
+        };
+
+        $productList = [];
+        foreach ($ProductList as $Product) {
+            $Product->getImagePath($this->hostname);
+            $productList [] = $Product;
         }
 
-        $productListArray = $this->CoreService
-            ->transformToArrayWithFunction($ProductList, array($this->Product, 'getImagePath'), $this->hostname);
-
-        return new JsonModel($productListArray);
+        return new JsonModel($productList);
     }
 
     /**
@@ -69,27 +67,21 @@ class ProductController extends CoreController
         $productId = $this->ProductFilter->sanitize(['product_id' => $productId])['product_id'];
 
         try {
-            $ProductDetails = $this->ProductTable->fetchProducts([
-                'product_image',
-                'product_name',
-                'product_desc',
-                'stock_qty',
-                'price'
-            ], ['product_id' => $productId])->current();
+            $ProductDetails = $this->ProductTable->fetchProducts(null, ['product_id' => $productId])->current();
 
             if (!$ProductDetails) {
-                $response = ['code' => 404, 'details' => 'Product not found']; //naming (responseError)
+                $errorResponse = ['code' => 404, 'details' => 'Product not found'];
             }
+
+            $ProductDetails->getImagePath($this->hostname);
+
         } catch (\Exception $e) {
-            $response = ['code' => 500, 'details' => 'Internal Server Error'];
+            $errorResponse = ['code' => 500, 'details' => 'Internal Server Error'];
         }
 
-        if (isset($response))
-            return new ApiProblemResponse(new ApiProblem($response['code'], $response['details']));
+        if (isset($errorResponse))
+            return new ApiProblemResponse(new ApiProblem($errorResponse['code'], $errorResponse['details']));
 
-        $productDetailsArray = get_object_vars($ProductDetails);
-        $productDetailsArray = $this->Product->getImagePath($productDetailsArray, $this->hostname);
-
-        return new JsonModel($productDetailsArray);
+        return new JsonModel($ProductDetails->getArrayCopy());
     }
 }

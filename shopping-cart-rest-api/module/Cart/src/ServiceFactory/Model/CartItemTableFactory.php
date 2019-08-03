@@ -14,6 +14,7 @@ class CartItemTableFactory
         // Creation for table gateway instance
         $DbAdapter = $Container->get('shopping_cart');
         $ResultSetPrototype = new ResultSet();
+        $ResultSetPrototype->setArrayObjectPrototype(new CartItem());
 
         // create TableGateway instance
         $TableGateway = new TableGateway(

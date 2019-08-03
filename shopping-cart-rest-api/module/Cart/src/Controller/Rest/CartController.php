@@ -3,6 +3,7 @@ namespace Cart\Controller\Rest;
 
 use Application\Controller\CoreController;
 use Application\Service\CoreService;
+use Cart\Model\CartItemProduct;
 use Cart\Model\CartItemTable;
 use Cart\Model\CartTable;
 use Cart\Service\CartItemService;
@@ -54,17 +55,20 @@ class CartController extends CoreController
     public function getList()
     {
         try {
-            $Cart = $this->CartTable->fetchCart(
-                ['cart_id', 'sub_total', 'shipping_total', 'total_amount'])->current();
+            $Cart = $this->CartTable->fetchCart()->current();
             $CartItems = $this->CartItemTable->fetchCartItems(['qty', 'item_price' => 'price'],
-                ['cart_id' => $Cart->cart_id], ['product_thumbnail', 'price', 'product_desc']);
+                ['cart_id' => $Cart->cart_id], ['product_thumbnail', 'price', 'product_desc'])
+                ->setArrayObjectPrototype(new CartItemProduct());
 
         } catch (\Exception $e) {
             return new ApiProblemResponse(new ApiProblem(500, 'Internal Server Error'));
         }
 
-        $cartItemArray = $this->CoreService
-            ->transformToArrayWithFunction($CartItems, array($this->Product, 'getImagePath'), $this->hostname);
+        $cartItemArray = [];
+        foreach ($CartItems as $CartItem) {
+            $CartItem->getImagePath($this->hostname);
+            $cartItemArray [] = $CartItem;
+        }
 
         return new JsonModel(['cartItems' => $cartItemArray, 'cartDetails' => get_object_vars($Cart)]);
     }
